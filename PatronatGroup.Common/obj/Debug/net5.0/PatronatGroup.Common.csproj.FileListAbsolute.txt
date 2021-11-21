@@ -1,0 +1,11 @@
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\bin\Debug\net5.0\PatronatGroup.Common.deps.json
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\bin\Debug\net5.0\PatronatGroup.Common.dll
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\bin\Debug\net5.0\ref\PatronatGroup.Common.dll
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\bin\Debug\net5.0\PatronatGroup.Common.pdb
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\PatronatGroup.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\PatronatGroup.Common.AssemblyInfoInputs.cache
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\PatronatGroup.Common.AssemblyInfo.cs
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\PatronatGroup.Common.csproj.CoreCompileInputs.cache
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\PatronatGroup.Common.dll
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\ref\PatronatGroup.Common.dll
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\PatronatGroup.Common.pdb

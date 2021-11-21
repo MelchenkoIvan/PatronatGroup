@@ -1,0 +1,16 @@
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.exe
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.deps.json
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.runtimeconfig.json
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.runtimeconfig.dev.json
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.dll
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\bin\Debug\net5.0\ref\PatronatGroup.Interfaces.Infrastrukture.dll
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.pdb
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\obj\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.csprojAssemblyReference.cache
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\obj\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\obj\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.AssemblyInfoInputs.cache
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\obj\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.AssemblyInfo.cs
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\obj\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.csproj.CoreCompileInputs.cache
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\obj\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.dll
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\obj\Debug\net5.0\ref\PatronatGroup.Interfaces.Infrastrukture.dll
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\obj\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.pdb
+C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Infrastrukture\obj\Debug\net5.0\PatronatGroup.Interfaces.Infrastrukture.genruntimeconfig.cache
