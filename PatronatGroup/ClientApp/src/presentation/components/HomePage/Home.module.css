@@ -1,0 +1,7 @@
+.container {
+    background: #2b2e4a;
+    width: 90rem;
+    display: flex;
+    border: 1px solid #B3CDE0;
+    flex-direction: column;
+}
