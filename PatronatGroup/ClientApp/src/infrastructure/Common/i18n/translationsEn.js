@@ -5,4 +5,16 @@ export const translationsEn = {
     benefits: "Benefits",
     сommand: "Command",
     practices: "Practices",
+    toСontactUs:"To contact us",
+    contacts:"Contacts",
+    menu:"Menu",
+    toMain:"To main",
+    taxLaw:"Tax law",
+    criminalLaw:"Criminal law",
+    arbitragePractice:"Arbitrage practice",
+    communalLaw:"Communal law",
+    corporateRight:"Corporate right",
+    familyInheritanceLaw:"Family inheritance law",
+    antiRaiderServices:"Anti-raider services",
+    telephone:"Telephone:"
 };

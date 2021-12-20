@@ -8,15 +8,19 @@ import "semantic-ui-css/semantic.min.css";
 
 import "../custom.css";
 import TranslateHoc from "../infrastructure/Common/hoc/TranslateHoc";
+import { Route } from "react-router";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
-const App = (props:any) => {
+const App = (props: any) => {
   return (
     <Layout>
-      <Home />
-      {/* <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetch-data/:startDateIndex?' component={FetchData} /> */}
-      <LenguagesButtons />
+      <div className="containerLayout">
+        <Header />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/aa" component={Header} />
+        <Footer/>
+      </div>
     </Layout>
   );
 };

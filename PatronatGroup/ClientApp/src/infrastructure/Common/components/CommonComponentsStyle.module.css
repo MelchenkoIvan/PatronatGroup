@@ -1,7 +1,7 @@
 /* Underline component */
-.containerUnderline{
-    display: flex;
-    align-items: center;
+.containerUnderline {
+  display: flex;
+  align-items: center;
 }
 .underline {
   width: 100%;
@@ -31,10 +31,34 @@
   border: 0.42rem solid transparent;
   border-top-color: #e8687c;
 }
-.rhombus:nth-of-type(1){
-    right: 0.156rem;
+.rhombus:nth-of-type(1) {
+  right: 0.156rem;
 }
-.rhombus:nth-of-type(2){
-    left: 0.156rem;
+.rhombus:nth-of-type(2) {
+  left: 0.156rem;
+}
+/* Button component */
+.button {
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid #B3CDE0;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 7px;
+  background-color: rgba(0, 91, 150, 1);
+  color: #b3cde0;
+  font-size: 35px;
+  line-height: 41px;
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 5px;
+  padding: 4px 10px;
+}
+.button:hover{
+  opacity: 80%;
+}
+.button:focus {
+  outline: none;
 }
 

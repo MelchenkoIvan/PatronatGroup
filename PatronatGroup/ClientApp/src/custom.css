@@ -12,6 +12,10 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+/* app */
+#root{
+  background: #2B2E4A;
+}
 /* common for blok */
 .commonForBloks{
   width: 100%;
@@ -23,4 +27,16 @@ code {
   box-sizing: border-box;
   backdrop-filter: blur(4px);
   border-radius: 10px;
+}
+/* common for blok */
+.containerLayout{
+  background: #011F4B;
+  width: 90rem;
+  display: flex;
+  border: 1px solid #B3CDE0;
+  flex-direction: column;
+}
+/* icon */
+.socialIcon{
+  margin: 0 7px;
 }

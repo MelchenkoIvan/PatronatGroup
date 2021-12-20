@@ -1,11 +1,13 @@
 import * as React from 'react';
 //components
-import Underline from '../../../infrastructure/Common/components/Underline';
+import Underline from '../../../../infrastructure/Common/components/Underline';
 //style
 import style from "./MainBlok.module.css" 
 //resources
-import { labels } from '../../../infrastructure/Common/i18n/translationsServices';
-import TranslateHoc from '../../../infrastructure/Common/hoc/TranslateHoc';
+import { labels } from '../../../../infrastructure/Common/i18n/translationsServices';
+import TranslateHoc from '../../../../infrastructure/Common/hoc/TranslateHoc';
+//icons
+import mainImg from '../../../../assets/mainImg.png'
 
 const MainBlok:React.FC = (props:any) => {
     return (
@@ -16,7 +18,7 @@ const MainBlok:React.FC = (props:any) => {
                     <Underline />
                 </div>
                 <div className={style.containerMainImg}>
-                    <div className={style.mainImg} />
+                    <img src={mainImg} className={style.mainImg} />
                 </div>
             </div>
     )

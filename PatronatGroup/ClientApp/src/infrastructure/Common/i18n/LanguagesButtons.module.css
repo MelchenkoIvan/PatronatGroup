@@ -1,0 +1,30 @@
+.buttonEn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: local;
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+  color: #B3CDE0;
+}
+.buttonEn:focus {
+  outline: none;
+}
+.buttonUk {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: local;
+    font-family: Tenor Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    color: #B3CDE0;
+}
+.buttonUk:focus {
+  outline: none;
+}
