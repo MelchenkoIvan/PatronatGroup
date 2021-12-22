@@ -16,5 +16,12 @@ export const translationsEn = {
     corporateRight:"Corporate right",
     familyInheritanceLaw:"Family inheritance law",
     antiRaiderServices:"Anti-raider services",
-    telephone:"Telephone:"
+    telephone:"Telephone:",
+    send:"Send",
+    phonenumber:"Phone number",
+    name:"Name",
+    description:"Description",
+    requiredField:"(Required field)",
+    email:"E-mail",
+    allPartners:"All partners",
 };

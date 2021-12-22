@@ -1,0 +1,100 @@
+/* MainBlok */
+.container {
+  display: flex;
+  height: 44.063rem;
+  padding-bottom: 0px !important;
+}
+
+.containerMainImg {
+  width: 50%;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.mainImg {
+  width: 100%;
+}
+.title {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.lawyersAssociation {
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 47px;
+  align-items: center;
+  text-align: center;
+  color: #b3cde0;
+  text-shadow: 0px -6px 4px rgba(0, 0, 0, 0.25);
+}
+.firmaName {
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 90px;
+  line-height: 105px;
+  align-items: center;
+  text-align: center;
+  color: #b3cde0;
+
+  text-shadow: 0px -6px 4px rgba(0, 0, 0, 0.25);
+}
+/* AboutCompany */
+.contentAboutCompany {
+  display: flex;
+  justify-content: space-between;
+}
+.townImg {
+  width: 49%;
+}
+.aboutCompanyText {
+  width: 49%;
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #C4C4C4;
+}
+.containerAboutCompany {
+  margin: 2% 2% 0 2%;
+}
+.aboutCompanyButton {
+  margin-top: 20px;
+  text-align: end;
+}
+/* Bemefits block */
+.firstRowBenefits{
+  display: flex;
+  justify-content: center;
+}
+.secondRowBenefits{
+  display: flex;
+  justify-content: center;
+}
+/* Command Blok */
+.slider{
+  width: 60%;
+  margin: 0 auto;
+}
+.containerCommand{
+  margin: 40px 0;
+}
+.slide{
+  background-color: rgba(0, 91, 150, 1);
+  padding: 10px;
+  border: 1px solid rgba(179, 205, 224, 1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+.commandButton{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

@@ -17,4 +17,12 @@ export const labels = {
     familyInheritanceLaw:"familyInheritanceLaw",
     antiRaiderServices:"antiRaiderServices",
     telephone:"telephone",
+    send:"send",
+    phonenumber:"phonenumber",
+    name:"name",
+    description:"description",
+    requiredField:"requiredField",
+    email:"email",
+    allPartners:"allPartners",
+    
 }

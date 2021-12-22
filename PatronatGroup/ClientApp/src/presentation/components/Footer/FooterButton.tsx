@@ -3,10 +3,10 @@ import React, { FC } from "react";
 import style from "./Footer.module.css";
 
 interface Props {
-    content: string;
+  content: string;
+  onClick: () => void;
 }
 const FooterButton: FC<Props> = (props) => {
-
-  return <button>{props.content}</button>
+  return <button className={style.footerButtonMenu} onClick={props.onClick}> {props.content}</button>;
 };
 export default FooterButton;

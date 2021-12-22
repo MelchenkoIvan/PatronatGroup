@@ -1,0 +1,37 @@
+.container {
+  max-width: 300px;
+  width: 100%;
+  background-color: rgba(0, 91, 150, 1);
+  border: 1px solid rgba(179, 205, 224, 1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 2px 7px 20px 7px;
+  margin: 20px;
+}
+.img {
+  display: flex;
+  margin: 0 auto;
+}
+.title {
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  color: rgba(179, 205, 224, 1);
+  text-align: center;
+}
+.content {
+  margin-top: 5px;
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
+  color: rgba(179, 205, 224, 1);
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

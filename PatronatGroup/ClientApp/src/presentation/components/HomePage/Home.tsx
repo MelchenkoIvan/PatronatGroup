@@ -6,6 +6,9 @@ import { labels } from '../../../infrastructure/Common/i18n/translationsServices
 import Blok from '../Skeletons/Blok';
 import AboutCompanyBlok from './Bloks/AboutCompanyBlok';
 import MainBlok from './Bloks/MainBlok';
+import BenefitsBlok from './Bloks/BenefitsBlok';
+import PracticesBlok from './Bloks/PracticesBlok';
+import CommandBlok from './Bloks/CommandBlok';
 //style
 import style from "./Home.module.css";
 //icons
@@ -25,9 +28,9 @@ const Home:FC = () => {
         <>
             <MainBlok/>
             <Blok icon={aboutCompanyImg} title={t(labels.aboutCompany)} Content = {AboutCompanyBlok}/>
-            <Blok icon={benefitsImg} title={t(labels.benefits)} Content = {Try}/>
-            <Blok icon={practicesImg} title={t(labels.practices)} Content = {Try}/>
-            <Blok icon={commandImg} title={t(labels.сommand)} Content = {Try}/>
+            <Blok icon={benefitsImg} title={t(labels.benefits)} Content = {BenefitsBlok}/>
+            <Blok icon={practicesImg} title={t(labels.practices)} Content = {PracticesBlok}/>
+            <Blok icon={commandImg} title={t(labels.сommand)} Content = {CommandBlok}/>
         </>
     )
 }

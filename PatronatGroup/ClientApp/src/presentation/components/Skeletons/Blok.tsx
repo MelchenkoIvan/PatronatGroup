@@ -5,10 +5,10 @@ import style from "./Blok.module.css";
 
 interface Props {
   title: string;
-  icon: string;
+  icon?: string;
   Content: FC;
 }
-const styleForunderlinr = {
+const styleForUnderlinr = {
   width: "120%",
   position: "relative",
   right: "10%",
@@ -19,11 +19,11 @@ const Blok: FC<Props> = (props) => {
   return (
     <div className={`commonForBloks`}>
       <div className={style.header}>
-        <img className={style.img} src={icon} alt={icon} />
+        {icon && <img className={style.img} src={icon} alt={icon} />}
         <div className={style.titleContainer}>
           <div className={style.title}>
             {title}
-            <Underline style={styleForunderlinr} />
+            <Underline style={styleForUnderlinr} />
           </div>
         </div>
       </div>

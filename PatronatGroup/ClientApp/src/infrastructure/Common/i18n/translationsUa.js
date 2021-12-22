@@ -1,4 +1,4 @@
-export const translationsUk = {
+export const translationsUa = {
     firmaName: "Патронат групп",
     lawyersAssociation: "Адвокатское объединение",
     aboutCompany: "О компании",
@@ -17,4 +17,11 @@ export const translationsUk = {
     familyInheritanceLaw:"Семейно наследственное право",
     antiRaiderServices:"Антирейдерские услуги",
     telephone:"Tелефон:",
+    send:"Отправить:",
+    phonenumber:"Телефонный номер",
+    name:"Имя",
+    description:"Описание",
+    requiredField:"(Обязательное поле)",
+    email:"Электронная почта",
+    allPartners:"Все партнеры"
 };

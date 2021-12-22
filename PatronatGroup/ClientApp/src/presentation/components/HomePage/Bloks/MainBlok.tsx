@@ -2,7 +2,7 @@ import * as React from 'react';
 //components
 import Underline from '../../../../infrastructure/Common/components/Underline';
 //style
-import style from "./MainBlok.module.css" 
+import style from "./Bloks.module.css" 
 //resources
 import { labels } from '../../../../infrastructure/Common/i18n/translationsServices';
 import TranslateHoc from '../../../../infrastructure/Common/hoc/TranslateHoc';
