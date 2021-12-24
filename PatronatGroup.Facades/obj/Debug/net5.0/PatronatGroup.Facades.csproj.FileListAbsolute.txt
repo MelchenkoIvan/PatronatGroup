@@ -9,3 +9,22 @@ C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGr
 C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.dll
 C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\ref\PatronatGroup.Facades.dll
 C:\Users\imelc\OneDrive\Desktop\Praca Dyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.pdb
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\PatronatGroup.Facades.deps.json
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\PatronatGroup.Facades.dll
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\ref\PatronatGroup.Facades.dll
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\PatronatGroup.Facades.pdb
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.csprojAssemblyReference.cache
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.AssemblyInfoInputs.cache
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.AssemblyInfo.cs
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.csproj.CoreCompileInputs.cache
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.dll
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\ref\PatronatGroup.Facades.dll
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.pdb
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\PatronatGroup.Common.dll
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\PatronatGroup.Interfaces.Facades.dll
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastructure.dll
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\PatronatGroup.Common.pdb
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\PatronatGroup.Interfaces.Facades.pdb
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastructure.pdb
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Facades\obj\Debug\net5.0\PatronatGroup.Facades.csproj.CopyComplete

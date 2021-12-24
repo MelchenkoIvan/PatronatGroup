@@ -4,14 +4,14 @@
     "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.DI\\PatronatGroup.DI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.DI\\PatronatGroup.DI.csproj": {
+    "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.DI\\PatronatGroup.DI.csproj",
-        "projectName": "PatronatGroup.DI",
-        "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.DI\\PatronatGroup.DI.csproj",
+        "projectUniqueName": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj",
+        "projectName": "PatronatGroup.Common",
+        "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj",
         "packagesPath": "C:\\Users\\imelc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.DI\\obj\\",
+        "outputPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -43,6 +43,373 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.DI\\PatronatGroup.DI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.DI\\PatronatGroup.DI.csproj",
+        "projectName": "PatronatGroup.DI",
+        "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.DI\\PatronatGroup.DI.csproj",
+        "packagesPath": "C:\\Users\\imelc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.DI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj"
+              },
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.EntityFramework\\PatronatGroup.EntityFramework.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.EntityFramework\\PatronatGroup.EntityFramework.csproj"
+              },
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Facades\\PatronatGroup.Facades.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Facades\\PatronatGroup.Facades.csproj"
+              },
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Facades\\PatronatGroup.Interfaces.Facades.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Facades\\PatronatGroup.Interfaces.Facades.csproj"
+              },
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\PatronatGroup.Interfaces.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\PatronatGroup.Interfaces.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.EntityFramework\\PatronatGroup.EntityFramework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.EntityFramework\\PatronatGroup.EntityFramework.csproj",
+        "projectName": "PatronatGroup.EntityFramework",
+        "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.EntityFramework\\PatronatGroup.EntityFramework.csproj",
+        "packagesPath": "C:\\Users\\imelc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.EntityFramework\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj"
+              },
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\PatronatGroup.Interfaces.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\PatronatGroup.Interfaces.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Facades\\PatronatGroup.Facades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Facades\\PatronatGroup.Facades.csproj",
+        "projectName": "PatronatGroup.Facades",
+        "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Facades\\PatronatGroup.Facades.csproj",
+        "packagesPath": "C:\\Users\\imelc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Facades\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj"
+              },
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Facades\\PatronatGroup.Interfaces.Facades.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Facades\\PatronatGroup.Interfaces.Facades.csproj"
+              },
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\PatronatGroup.Interfaces.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\PatronatGroup.Interfaces.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Facades\\PatronatGroup.Interfaces.Facades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Facades\\PatronatGroup.Interfaces.Facades.csproj",
+        "projectName": "PatronatGroup.Interfaces.Facades",
+        "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Facades\\PatronatGroup.Interfaces.Facades.csproj",
+        "packagesPath": "C:\\Users\\imelc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Facades\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\PatronatGroup.Interfaces.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\PatronatGroup.Interfaces.Infrastructure.csproj",
+        "projectName": "PatronatGroup.Interfaces.Infrastructure",
+        "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\PatronatGroup.Interfaces.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\imelc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Interfaces.Infrastrukture\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\imelc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {
+                "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

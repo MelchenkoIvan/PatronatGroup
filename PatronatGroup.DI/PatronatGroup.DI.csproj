@@ -5,4 +5,12 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PatronatGroup.Common\PatronatGroup.Common.csproj" />
+    <ProjectReference Include="..\PatronatGroup.EntityFramework\PatronatGroup.EntityFramework.csproj" />
+    <ProjectReference Include="..\PatronatGroup.Facades\PatronatGroup.Facades.csproj" />
+    <ProjectReference Include="..\PatronatGroup.Interfaces.Facades\PatronatGroup.Interfaces.Facades.csproj" />
+    <ProjectReference Include="..\PatronatGroup.Interfaces.Infrastrukture\PatronatGroup.Interfaces.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

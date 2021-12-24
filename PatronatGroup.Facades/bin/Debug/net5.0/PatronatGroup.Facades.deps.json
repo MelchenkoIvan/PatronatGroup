@@ -7,14 +7,55 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "PatronatGroup.Facades/1.0.0": {
+        "dependencies": {
+          "PatronatGroup.Common": "1.0.0",
+          "PatronatGroup.Interfaces.Facades": "1.0.0",
+          "PatronatGroup.Interfaces.Infrastructure": "1.0.0"
+        },
         "runtime": {
           "PatronatGroup.Facades.dll": {}
+        }
+      },
+      "PatronatGroup.Common/1.0.0": {
+        "runtime": {
+          "PatronatGroup.Common.dll": {}
+        }
+      },
+      "PatronatGroup.Interfaces.Facades/1.0.0": {
+        "dependencies": {
+          "PatronatGroup.Common": "1.0.0"
+        },
+        "runtime": {
+          "PatronatGroup.Interfaces.Facades.dll": {}
+        }
+      },
+      "PatronatGroup.Interfaces.Infrastructure/1.0.0": {
+        "dependencies": {
+          "PatronatGroup.Common": "1.0.0"
+        },
+        "runtime": {
+          "PatronatGroup.Interfaces.Infrastructure.dll": {}
         }
       }
     }
   },
   "libraries": {
     "PatronatGroup.Facades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PatronatGroup.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PatronatGroup.Interfaces.Facades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PatronatGroup.Interfaces.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
