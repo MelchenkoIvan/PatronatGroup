@@ -13,6 +13,8 @@ import "semantic-ui-css/semantic.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../custom.css";
+import Practices from "./components/Practices/Practices";
+import Command from "./components/Command/Command";
 
 
 const App = (props: any) => {
@@ -23,7 +25,8 @@ const App = (props: any) => {
         <Route exact path="/" component={Home} />
         <Route exact path="/aboutCompany" component={AboutCompany} />
         <Route exact path="/contacts" component={Contacts} />
-        <Route exact path="/aa" component={Header} />
+        <Route exact path="/practices" component={Practices} />
+        <Route exact path="/command" component={Command} />
         <Footer/>
       </div>
     </Layout>

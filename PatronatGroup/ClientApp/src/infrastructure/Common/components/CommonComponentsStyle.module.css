@@ -104,3 +104,14 @@
 .textArea:focus {
   outline: 1px solid #c8e6f5;
 }
+/* toMainButton */
+
+.toMainButton{
+  display: flex;
+  justify-content: center;
+}
+/* social */
+.social{
+  display: flex;
+  margin-top: 5px;
+}

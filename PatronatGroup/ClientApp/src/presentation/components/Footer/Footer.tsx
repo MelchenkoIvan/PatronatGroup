@@ -5,15 +5,11 @@ import TranslateHoc from "../../../infrastructure/Common/hoc/TranslateHoc";
 import Button from "../../../infrastructure/Common/components/Button";
 import FooterButton from "./FooterButton";
 import { useHistory } from "react-router";
-
+import { labels } from "../../../infrastructure/Common/i18n/translationsServices";
+import Social from "../../../infrastructure/Common/components/Social";
 //style
 import style from "./Footer.module.css";
-//icons
-import facebook from "../../../assets/social/facebook.png";
-import instagramm from "../../../assets/social/instagramm.png";
-import telegramm from "../../../assets/social/telegramm.png";
-import watsapp from "../../../assets/social/watsapp.png";
-import { labels } from "../../../infrastructure/Common/i18n/translationsServices";
+
 
 interface Props {
   translate: (label: string) => string;
@@ -35,20 +31,19 @@ const Footer: FC<Props> = (props) => {
           <div>law@mail.com</div>
           <div className={style.footerButtonContacts}>
             <Button
-            style={{margin:"0px",fontSize:"25px",lineHeight: "105%",width:"100%"}}
-              content={translate(labels.toСontactUs)}
+              style={{
+                margin: "0px",
+                fontSize: "25px",
+                lineHeight: "105%",
+                width: "100%",
+              }}
+              content={translate(labels.toContactUs)}
               onClick={() => {
                 history.push({ pathname: `/command` });
               }}
             />
           </div>
-
-          <div className={style.socialAndLang}>
-            <img className="socialIcon" src={facebook} alt="facebook" />
-            <img className="socialIcon" src={instagramm} alt="instagramm" />
-            <img className="socialIcon" src={telegramm} alt="telegramm" />
-            <img className="socialIcon" src={watsapp} alt="watsapp" />
-          </div>
+          <Social />
         </div>
       </div>
 
@@ -71,9 +66,9 @@ const Footer: FC<Props> = (props) => {
           <Underline />
         </div>
         <div className={style.footerMenu}>
-        <FooterButton
+          <FooterButton
             onClick={() => {
-              history.push({ pathname: `/aboutCompany` });
+              history.push({ pathname: `/` });
             }}
             content={translate(labels.toMain)}
           />
@@ -93,7 +88,7 @@ const Footer: FC<Props> = (props) => {
             onClick={() => {
               history.push({ pathname: `/command` });
             }}
-            content={translate(labels.сommand)}
+            content={translate(labels.command)}
           />
           <FooterButton
             onClick={() => {

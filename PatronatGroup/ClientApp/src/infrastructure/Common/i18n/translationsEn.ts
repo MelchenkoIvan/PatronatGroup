@@ -3,9 +3,9 @@ export const translationsEn = {
     lawyersAssociation: "Lawyers' association",
     aboutCompany: "About company",
     benefits: "Benefits",
-    сommand: "Command",
+    command: "Command",
     practices: "Practices",
-    toСontactUs:"To contact us",
+    toContactUs:"To contact us",
     contacts:"Contacts",
     menu:"Menu",
     toMain:"To main",
@@ -24,4 +24,17 @@ export const translationsEn = {
     requiredField:"(Required field)",
     email:"E-mail",
     allPartners:"All partners",
+    moreDetails:"More details",
+    //descriptions
+    taxLawDescriptions:"Lorem ipsum dolor sit amet. " +
+    "consectetur adipiscing elit. " +
+    "In arcu cursus euismod quis viverra nibh." +
+    "Mattis ullamcorper velit sed ullamcorper morbi tincidunt." +
+    "Eu consequat ac felis donec." +
+    "Ac turpis egestas sed tempus urna et." +
+    "Ipsum a arcu cursus vitae congue mauris rhoncus." +
+    "In cursus turpis massa tincidunt dui ut ornare lectus sit." +
+    "Augue ut lectus arcu bibendum at varius vel pharetr",
+
 };
+

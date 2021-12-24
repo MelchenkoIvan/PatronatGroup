@@ -4,8 +4,11 @@ import { useHistory } from "react-router";
 import Slider from "react-slick";
 import Button from "../../../../infrastructure/Common/components/Button";
 import { labels } from "../../../../infrastructure/Common/i18n/translationsServices";
+import CommandSkeleton from "../../Skeletons/Command/CommandSkeleton";
 //style
 import style from "./Bloks.module.css";
+//icons
+import exImg from "../../../../assets/exampleImg.png";
 
 const CommandBlok: FC = () => {
   const history = useHistory();
@@ -19,41 +22,35 @@ const CommandBlok: FC = () => {
   return (
     <div className={style.containerCommand}>
       <Slider {...settings} className={style.slider}>
-        <div className={style.slide}>
-          <div>
-            <img />
-          </div>
-          <div>
-            <div className={style.workerName}>
-              Lorem ipsum
-            </div>
-            <div className={style.workerPosition}>
-              Lorem ipsum
-            </div>
-            <div className={style.aboutWorker}>
-              Lorem ipsum
-            </div>
-          </div>
-        </div>
-        <div className={style.slide}>
-          <div>
-            <img />
-          </div>
-          <div>
-            <div className={style.workerName}>
-              Lorem ipsum
-            </div>
-            <div className={style.workerPosition}>
-              Lorem ipsum
-            </div>
-            <div className={style.aboutWorker}>
-              Lorem ipsum
-            </div>
-          </div>
-        </div>
+        <CommandSkeleton
+         isSlider
+          contactData="imelchenko61@gmail.con"
+          name="Melchenko Ivan"
+          icon={exImg}
+          description="Lorem ipsum dolor sit amet.
+    consectetur adipiscing elit.
+    In arcu cursus euismod quis viverra nibh.
+    Mattis ullamcorper velit sed ullamcorper morbi tincidunt."
+        />
+         <CommandSkeleton
+         isSlider
+          contactData="imelchenko61@gmail.con"
+          name="Melchenko Ivan"
+          icon={exImg}
+          description="Lorem ipsum dolor sit amet.
+    consectetur adipiscing elit.
+    In arcu cursus euismod quis viverra nibh.
+    Mattis ullamcorper velit sed ullamcorper morbi tincidunt."
+        />
       </Slider>
       <div className={style.commandButton}>
-        <Button content={t(labels.allPartners)} style={{width:"30%"}} onClick={() => {history.push({pathname:`/command`})}} />
+        <Button
+          content={t(labels.allPartners)}
+          style={{ width: "30%" }}
+          onClick={() => {
+            history.push({ pathname: `/command` });
+          }}
+        />
       </div>
     </div>
   );

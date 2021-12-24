@@ -40,7 +40,7 @@ const ContactModal: FC<Props> = ({ handleClose, show }) => {
         </button>
         <div className={style.titileContainer}>
           <div className={style.titile}>
-            {t(labels.toСontactUs)}
+            {t(labels.toContactUs)}
             <Underline />
           </div>
         </div>

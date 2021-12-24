@@ -40,7 +40,7 @@ const AboutCompanyBlok: FC = () => {
           </div>
         </div>
         <div className={style.aboutCompanyButton}>
-          <Button content={t(labels.toСontactUs)} onClick={showModal} />
+          <Button content={t(labels.toContactUs)} onClick={showModal} />
         </div>
       </div>
       <ContactModal handleClose={hideModal} show={show}><p>aa</p></ContactModal>

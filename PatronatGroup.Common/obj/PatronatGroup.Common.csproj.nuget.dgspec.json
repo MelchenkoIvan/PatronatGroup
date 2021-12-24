@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\imelc\\OneDrive\\Desktop\\Praca Dyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {}
+    "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\imelc\\OneDrive\\Desktop\\Praca Dyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {
+    "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\imelc\\OneDrive\\Desktop\\Praca Dyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj",
+        "projectUniqueName": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj",
         "projectName": "PatronatGroup.Common",
-        "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\Praca Dyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj",
+        "projectPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\PatronatGroup.Common.csproj",
         "packagesPath": "C:\\Users\\imelc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\Praca Dyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\obj\\",
+        "outputPath": "C:\\Users\\imelc\\OneDrive\\Desktop\\PracaDyplomowa\\Projekt\\PatronatGroup\\PatronatGroup.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

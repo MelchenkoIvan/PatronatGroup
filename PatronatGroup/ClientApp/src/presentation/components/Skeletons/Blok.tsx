@@ -6,7 +6,8 @@ import style from "./Blok.module.css";
 interface Props {
   title: string;
   icon?: string;
-  Content: FC;
+  Content?: any; // FC component
+  isBacgroundLight?: boolean;
 }
 const styleForUnderlinr = {
   width: "120%",
@@ -16,8 +17,11 @@ const styleForUnderlinr = {
 
 const Blok: FC<Props> = (props) => {
   const { title, icon, Content } = props;
+  const styleBacground = props.isBacgroundLight
+    ? `commonForBloks forBloksBackground`
+    : `commonForBloks`;
   return (
-    <div className={`commonForBloks`}>
+    <div className={styleBacground}>
       <div className={style.header}>
         {icon && <img className={style.img} src={icon} alt={icon} />}
         <div className={style.titleContainer}>
@@ -27,7 +31,7 @@ const Blok: FC<Props> = (props) => {
           </div>
         </div>
       </div>
-      <Content />
+      {props.Content ? <Content/> : ""}
     </div>
   );
 };

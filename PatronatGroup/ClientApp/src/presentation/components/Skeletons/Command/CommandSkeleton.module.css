@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  padding: 15px;
+}
+
+.title {
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 56px;
+  color: #b3cde0;
+}
+.subTitle {
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  color: #e8687c;
+}
+.conten {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+.description {
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #b3cde0;
+}
+.buttonAndSocial {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.img{
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+

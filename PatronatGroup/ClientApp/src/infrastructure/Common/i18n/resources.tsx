@@ -2,10 +2,10 @@ import React, { FC } from "react";
 
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { translationsEn } from "./translationsEn";
-import { translationsUa } from "./translationsUa";
 //style
 import style from "./LanguagesButtons.module.css";
+import { translationsUa } from "./translationsUa";
+import { translationsEn } from "./translationsEn";
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next

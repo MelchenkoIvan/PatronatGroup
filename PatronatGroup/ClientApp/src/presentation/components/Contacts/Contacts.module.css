@@ -1,0 +1,59 @@
+.content {
+  display: flex;
+  width: 95%;
+  margin: 15px auto;
+  justify-content: space-between;
+}
+.buttonAndSocila {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.description {
+  width: 80%;
+  margin: 10px auto;
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #b3cde0;
+}
+.qrCode {
+  background: #03396c;
+  border: 2.82614px solid #b3cde0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.qrCodeTitle {
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: #e8687c;
+  margin: 10px auto;
+}
+.qrCodeDescription {
+  font-family: Tenor Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 23px;
+  color: #b3cde0;
+  width: 93%;
+  margin: 0px auto 15px;
+}
+.qrCodeImg {
+  width: 40%;
+  margin: 0 auto;
+}
+.map {
+  width: 69%;
+  height: 317px;
+}

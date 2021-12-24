@@ -30,7 +30,7 @@ const Home:FC = () => {
             <Blok icon={aboutCompanyImg} title={t(labels.aboutCompany)} Content = {AboutCompanyBlok}/>
             <Blok icon={benefitsImg} title={t(labels.benefits)} Content = {BenefitsBlok}/>
             <Blok icon={practicesImg} title={t(labels.practices)} Content = {PracticesBlok}/>
-            <Blok icon={commandImg} title={t(labels.сommand)} Content = {CommandBlok}/>
+            <Blok icon={commandImg} title={t(labels.command)} Content = {CommandBlok}/>
         </>
     )
 }
