@@ -10,6 +10,7 @@ namespace PatronatGroup.Interfaces.Infrastructure
 {
     public interface IUserSrv
     {
-        Task<SignInResult> Login(UserDTO userDTO);
+        Task<UserDTO> Login(UserDTO userDTO);
+        Task<UserDTO> Register(UserDTO userDTO);
     }
 }

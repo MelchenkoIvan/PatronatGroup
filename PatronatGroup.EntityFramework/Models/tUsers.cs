@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PatronatGroup.EntityFramework.Models
 {
-    public class tUsers : IdentityUser<int>
+    public class tUsers : IdentityUser
     {
 
     }

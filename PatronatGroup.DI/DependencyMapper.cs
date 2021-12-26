@@ -1,7 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using PatronatGroup.EntityFramework;
+using PatronatGroup.EntityFramework.Models;
+using PatronatGroup.EntityFramework.Services;
+using PatronatGroup.Facades;
+using PatronatGroup.Interfaces.Facades;
+using PatronatGroup.Interfaces.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +26,21 @@ namespace PatronatGroup.DI
                 .AddDbContext<Context>(options =>
                     options.UseSqlServer(configuration.GetConnectionString("PatronatGroupContext"))
                 );
+            serviceCollection.TryAddSingleton<ISystemClock, SystemClock>();
+            serviceCollection.AddIdentityCore<tUsers>(o =>
+            {
+                o.Password.RequireDigit = true;
+                o.Password.RequireLowercase = false;
+                o.Password.RequireUppercase = false;
+                o.Password.RequireNonAlphanumeric = false;
+                o.Password.RequiredLength = 6;
+                o.User.RequireUniqueEmail = true;
+            })
+             .AddEntityFrameworkStores<Context>()
+             .AddSignInManager<SignInManager<tUsers>>();
 
-            //serviceCollection.AddScoped<IAdministrationFcd, AdministrationFcd>();
+            serviceCollection.AddScoped<IUserFcd, UserFcd>();
+            serviceCollection.AddScoped<IUserSrv, UserSrv>();
 
 
             //var mapperConfig = new MapperConfiguration(mc =>
@@ -27,8 +48,9 @@ namespace PatronatGroup.DI
             //    mc.AddProfile(new MappingProfile());
             //});
 
-           // IMapper mapper = mapperConfig.CreateMapper();
-           // serviceCollection.AddSingleton(mapper);
+            // IMapper mapper = mapperConfig.CreateMapper();
+            // serviceCollection.AddSingleton(mapper);
+          
         }
     }
 }

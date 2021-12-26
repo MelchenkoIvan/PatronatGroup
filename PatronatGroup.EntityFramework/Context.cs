@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PatronatGroup.EntityFramework
 {
-    public class Context : DbContext
+    public class Context : Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext<tUsers>
     {
 
         public Context(DbContextOptions<Context> options): base(options){ }

@@ -23,15 +23,45 @@ namespace PatronatGroup.EntityFramework.Services
             _signInManager = signInManager;
         }
 
-        public async Task<SignInResult> Login(UserDTO userDTO)
+        public async Task<UserDTO> Login(UserDTO userDTO)
         {
-            SignInResult result = new SignInResult();
             
             var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == userDTO.Email);
             if (user == null) return null;
 
-            result = await _signInManager.CheckPasswordSignInAsync(user, userDTO.Password, false);
-            return result;
+            var result = await _signInManager.CheckPasswordSignInAsync(user, userDTO.Password, false);
+            if (result.Succeeded)
+            {
+                return CreateUserObject(user);
+            }
+            return null;
+        }
+
+        public async Task<UserDTO> Register(UserDTO userDTO)
+        {
+            if (await _userManager.Users.AnyAsync(x => x.Email == userDTO.Email))
+            {
+                return null;
+            }
+            var user = new tUsers
+            {
+                UserName = userDTO.Email,
+                Email = userDTO.Email
+            };
+            var result = await _userManager.CreateAsync(user, userDTO.Password);
+            if (result.Succeeded)
+            {
+                return CreateUserObject(user);
+            }
+            return null;
+        }
+        private UserDTO CreateUserObject(tUsers user)
+        {
+
+            return new UserDTO
+            {
+                Email = user.Email,
+            };
         }
     }
 }
