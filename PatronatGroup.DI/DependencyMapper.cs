@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using PatronatGroup.EntityFramework;
+using PatronatGroup.EntityFramework.AutoMapper;
 using PatronatGroup.EntityFramework.Models;
 using PatronatGroup.EntityFramework.Services;
 using PatronatGroup.Facades;
@@ -39,18 +41,22 @@ namespace PatronatGroup.DI
              .AddEntityFrameworkStores<Context>()
              .AddSignInManager<SignInManager<tUsers>>();
 
+
             serviceCollection.AddScoped<IUserFcd, UserFcd>();
             serviceCollection.AddScoped<IUserSrv, UserSrv>();
 
+            serviceCollection.AddScoped<ILawyersFcd, LawyersFcd>();
+            serviceCollection.AddScoped<ILawyersSrv, LawyersSrv>();
 
-            //var mapperConfig = new MapperConfiguration(mc =>
-            //{
-            //    mc.AddProfile(new MappingProfile());
-            //});
 
-            // IMapper mapper = mapperConfig.CreateMapper();
-            // serviceCollection.AddSingleton(mapper);
-          
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            serviceCollection.AddSingleton(mapper);
+
         }
     }
 }

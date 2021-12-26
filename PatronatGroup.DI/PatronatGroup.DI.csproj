@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PatronatGroup.Common\PatronatGroup.Common.csproj" />
     <ProjectReference Include="..\PatronatGroup.EntityFramework\PatronatGroup.EntityFramework.csproj" />
     <ProjectReference Include="..\PatronatGroup.Facades\PatronatGroup.Facades.csproj" />

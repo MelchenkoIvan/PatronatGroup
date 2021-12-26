@@ -17,44 +17,44 @@ namespace PatronatGroup.Controllers
         {
             _lawyersFcd = lawyersFcd;
         }
-        [HttpGet]
-        public async Task<ActionResult<LawyersDTO>> GetLawyers(LawyersDTO lawyers)
+        [HttpGet("")]
+        public ActionResult<List<LawyersDTO>> GetLawyers()
         {
-
-            return Ok();
+            var lawyers = _lawyersFcd.GetLawyers();
+            return Ok(lawyers);
 
         }
         [HttpPost("")]
-        public async Task<ActionResult<LawyersDTO>> CreateLawyer(LawyersDTO lawyers)
+        public ActionResult CreateLawyer(LawyersDTO lawyerDTO)
         {
-
+            _lawyersFcd.CreateLawyer(lawyerDTO);
             return Ok();
-
         }
         [HttpPut("")]
-        public async Task<ActionResult<UserDTO>> UpdateLawyer(UserDTO userDTO)
+        public ActionResult UpdateLawyer(LawyersDTO lawyerDTO)
         {
+            _lawyersFcd.UpdateLawyer(lawyerDTO);
             return Ok();
-
         }
         [HttpDelete("")]
-        public async Task<ActionResult<LawyersDTO>> DeleteLawyer(LawyersDTO lawyers)
+        public ActionResult DeleteLawyer(int lawyerId)
         {
+            _lawyersFcd.DeleteLawyer(lawyerId);
             return Ok();
 
         }
 
         [HttpPost("submit")]
-        public async Task<ActionResult<ToContactUsDTO>> Submit(ToContactUsDTO toContactUs)
+        public ActionResult Submit(ToContactUsDTO toContactUs)
         {
+            _lawyersFcd.Submit(toContactUs);
             return Ok();
         }
-        [HttpGet]
-        public async Task<ActionResult<ToContactUsDTO>> GetClients(ToContactUsDTO toContactUs)
+        [HttpGet("clients")]
+        public ActionResult<List<ToContactUsDTO>> GetClients()
         {
-
-            return Ok();
-
+            var clients = _lawyersFcd.GetClients();
+            return Ok(clients);
         }
 
     }
