@@ -1,5 +1,5 @@
 import { t } from 'i18next';
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import TranslateHoc from '../../../infrastructure/Common/hoc/TranslateHoc';
 import { labels } from '../../../infrastructure/Common/i18n/translationsServices';
 //components
@@ -8,7 +8,7 @@ import AboutCompanyBlok from './Bloks/AboutCompanyBlok';
 import MainBlok from './Bloks/MainBlok';
 import BenefitsBlok from './Bloks/BenefitsBlok';
 import PracticesBlok from './Bloks/PracticesBlok';
-import CommandBlok from './Bloks/CommandBlok';
+import CommandBlokContainer from './Bloks/CommandBlokContainer';
 //style
 import style from "./Home.module.css";
 //icons
@@ -17,12 +17,6 @@ import benefitsImg from '../../../assets/benefitImg.png';
 import practicesImg from '../../../assets/practicesImg.png';
 import commandImg from '../../../assets/teamImg.png';
 
-
-
-const Try: FC = () => {
-    return<div></div>
-}
-
 const Home:FC = () => {
     return (
         <>
@@ -30,7 +24,7 @@ const Home:FC = () => {
             <Blok icon={aboutCompanyImg} title={t(labels.aboutCompany)} Content = {AboutCompanyBlok}/>
             <Blok icon={benefitsImg} title={t(labels.benefits)} Content = {BenefitsBlok}/>
             <Blok icon={practicesImg} title={t(labels.practices)} Content = {PracticesBlok}/>
-            <Blok icon={commandImg} title={t(labels.command)} Content = {CommandBlok}/>
+            <Blok icon={commandImg} title={t(labels.command)} Content = {CommandBlokContainer}/>
         </>
     )
 }

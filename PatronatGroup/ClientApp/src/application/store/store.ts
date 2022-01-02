@@ -1,6 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit'
 import { connectRouter } from 'connected-react-router'
 import { createBrowserHistory } from 'history';
+import homeReducer from './reducers/homeReducer';
 // ...
 // Create browser history to use in the Redux store
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href') as string;
@@ -8,7 +9,8 @@ const history = createBrowserHistory({ basename: baseUrl });
 export const store = configureStore({
   reducer: {
     //@ts-ignore
-    router: connectRouter(history)
+    router: connectRouter(history),
+    homePage:homeReducer,
   }
   // The thunk middleware was automatically added by reduxjs/toolkit
 })

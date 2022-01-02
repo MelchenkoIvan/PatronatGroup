@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PatronatGroup.Common.ModelsDTO;
 using PatronatGroup.Interfaces.Facades;
 using System;
@@ -18,6 +19,7 @@ namespace PatronatGroup.Controllers
             _lawyersFcd = lawyersFcd;
         }
         [HttpGet("")]
+        [AllowAnonymous]
         public ActionResult<List<LawyersDTO>> GetLawyers()
         {
             var lawyers = _lawyersFcd.GetLawyers();
@@ -45,6 +47,7 @@ namespace PatronatGroup.Controllers
         }
 
         [HttpPost("submit")]
+        [AllowAnonymous]
         public ActionResult Submit(ToContactUsDTO toContactUs)
         {
             _lawyersFcd.Submit(toContactUs);
