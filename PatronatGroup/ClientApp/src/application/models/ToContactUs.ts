@@ -1,7 +1,7 @@
 export default interface ToContactUs {
     Id: number,
-    FullName: string,
-    Eamail: string
-    PhoneNumber: string,
-    Description: string
+    fullName: string,
+    email: string
+    phoneNumber: string,
+    description: string
 }

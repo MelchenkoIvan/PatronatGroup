@@ -1,6 +1,7 @@
 import * as connectionString from './connectionString';
 import Lawyers from '../../application/models/Lawyers';
 import ToContactUs from '../../application/models/ToContactUs';
+import notificationService from './notificationService';
 
 export const lawyersService = {
     async GetLawyers() {
@@ -47,7 +48,10 @@ export const lawyersService = {
     async Submit(toContactUS: ToContactUs) {
         try {
             let data = await connectionString.api.post('lawyers/submit', toContactUS)
-                .then(response => response.data);
+                .then(response => response);
+            if(data.status == 200){
+                notificationService.Successful();
+            }
             return data;
         }
         catch (e) {

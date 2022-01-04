@@ -4,7 +4,7 @@ import TranslateHoc from '../../../infrastructure/Common/hoc/TranslateHoc';
 import { labels } from '../../../infrastructure/Common/i18n/translationsServices';
 //components
 import Blok from '../Skeletons/Blok';
-import AboutCompanyBlok from './Bloks/AboutCompanyBlok';
+import AboutCompanyBlokContainer from './Bloks/AboutCompanyBlokContainer';
 import MainBlok from './Bloks/MainBlok';
 import BenefitsBlok from './Bloks/BenefitsBlok';
 import PracticesBlok from './Bloks/PracticesBlok';
@@ -21,7 +21,7 @@ const Home:FC = () => {
     return (
         <>
             <MainBlok/>
-            <Blok icon={aboutCompanyImg} title={t(labels.aboutCompany)} Content = {AboutCompanyBlok}/>
+            <Blok icon={aboutCompanyImg} title={t(labels.aboutCompany)} Content = {AboutCompanyBlokContainer}/>
             <Blok icon={benefitsImg} title={t(labels.benefits)} Content = {BenefitsBlok}/>
             <Blok icon={practicesImg} title={t(labels.practices)} Content = {PracticesBlok}/>
             <Blok icon={commandImg} title={t(labels.command)} Content = {CommandBlokContainer}/>

@@ -20,7 +20,7 @@ namespace PatronatGroup.Controllers
         }
         [HttpGet("")]
         [AllowAnonymous]
-        public ActionResult<List<LawyersDTO>> GetLawyers()
+        public ActionResult GetLawyers()
         {
             var lawyers = _lawyersFcd.GetLawyers();
             return Ok(lawyers);

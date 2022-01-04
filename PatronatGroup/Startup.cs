@@ -48,7 +48,7 @@ namespace PatronatGroup
             if (env.IsDevelopment())
             {
                 app.UseCors(
-                    options => options.WithOrigins("http://localhost:3000").AllowAnyMethod()
+                    options => options.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod()
                 );
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();

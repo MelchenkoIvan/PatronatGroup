@@ -9,6 +9,7 @@ api.interceptors.response.use(async response => {
     return await response;
 }, (error: AxiosError) => {
     const {data,status} = error.response!;
+    
     const message = data.message;
     switch(status){
         case 400:

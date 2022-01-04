@@ -1,5 +1,7 @@
 import React, { FC, useState } from "react";
-
+import Button from "../../../../infrastructure/Common/components/Button";
+import ContactModal from "../ContactModal/ContactModal";
+import ToContactUs from "../../../../application/models/ToContactUs";
 //style
 import style from "./Bloks.module.css";
 //resources
@@ -7,10 +9,11 @@ import { labels } from "../../../../infrastructure/Common/i18n/translationsServi
 import { t } from "i18next";
 //icons
 import townImg from "../../../../assets/town.png";
-import Button from "../../../../infrastructure/Common/components/Button";
-import ContactModal from "../ContactModal/ContactModal";
 
-const AboutCompanyBlok: FC = () => {
+interface PropsType{
+  onSubmit: (values:ToContactUs) => void
+}
+const AboutCompanyBlok: FC<PropsType> = (props) => {
   const [show, setShow] = useState<boolean>(false);
   const showModal = () => {
     setShow(true);
@@ -43,7 +46,7 @@ const AboutCompanyBlok: FC = () => {
           <Button content={t(labels.toContactUs)} onClick={showModal} />
         </div>
       </div>
-      <ContactModal handleClose={hideModal} show={show}><p>aa</p></ContactModal>
+      <ContactModal onSubmit={props.onSubmit} handleClose={hideModal} show={show}></ContactModal>
     </>
   );
 };

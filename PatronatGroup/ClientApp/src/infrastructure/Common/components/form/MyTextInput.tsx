@@ -14,10 +14,10 @@ const MyTextInput = (props:Props) => {
     const[field,meta] = useField(props.name);
     return(
         <div>
-            <input {...field} {...props}  className={style.textInput}/>
             {meta.touched && meta.error ? (
-                <Label basic color='red'>{meta.error}</Label>
-            ): null}
+                //<Label basic color='red'>{meta.error}</Label>
+                <input {...field} {...props} className={style.textInput}/>
+            ): <input {...field} {...props}  className={style.textInput}/>}
         </div>
     )
 }

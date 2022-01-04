@@ -1,6 +1,9 @@
 import { toast } from 'react-toastify';
 
 const notificationService = {
+    Successful() {
+        toast.success(`Successful !`);
+    },
     BadRequest () {
         toast.error(`Bad Request!`);
     },

@@ -16,7 +16,7 @@ interface PropsType {
   command: Array<Lawyer>;
 }
 
-const CommandBlok: FC<PropsType> = ({ onGetPage, command }) => {
+const CommandBlok: FC<PropsType> = (props) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -28,23 +28,23 @@ const CommandBlok: FC<PropsType> = ({ onGetPage, command }) => {
   const history = useHistory();
 
   useEffect(() => {
-    onGetPage();
-  }, [onGetPage]);
+    props.onGetPage();
+  }, [props.onGetPage]);
 
   return (
     <div className={style.containerCommand}>
       <Slider {...settings} className={style.slider}>
-        {/* {command && command.map((x) => (
-          <div key={x.Email}>
+        {props.command && props.command.map((x) => (
+          <div key={x.id.toString()}>
             <CommandSkeleton
               isSlider
               contactData="imelchenko61@gmail.con"
-              name={x.Fullname}
+              name={x.fullName}
               icon={exImg}
-              description={x.Description}
+              description={x.description}
             />
           </div>
-        ))} */}
+        ))}
       </Slider>
       <div className={style.commandButton}>
         <Button

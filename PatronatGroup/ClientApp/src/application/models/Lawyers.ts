@@ -7,10 +7,11 @@ export default interface Lawyers{
     Position:string,
 }
 export interface Lawyer{
-    Name:string,
-    Surname:string,
-    Fullname:string,
-    Description:string,
-    Position:string,
-    Email:string,
+    id: number,
+    name:string,
+    surname:string,
+    fullName:string,
+    description:string,
+    position:string,
+    email:string,
 }
