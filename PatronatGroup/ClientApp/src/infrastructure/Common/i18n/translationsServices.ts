@@ -25,6 +25,14 @@ export const labels = {
   email: "email",
   allPartners: "allPartners",
   moreDetails: "moreDetails",
+  //validation
+  nameRequired:"nameRequired",
+  emailRequired:"emailRequired",
+  phoneRequired:"phoneRequired",
+  descriptionRequired:"descriptionRequired",
+  invalidEmail:"invalidEmail",
+  phoneIsNotCorrect:"phoneIsNotCorrect",
+  maxCharacters:"maxCharacters",
 };
 export const descriptions = {
   taxLawDescriptions: "taxLawDescriptions" 

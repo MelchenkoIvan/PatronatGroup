@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +13,7 @@ using Microsoft.OpenApi.Models;
 using PatronatGroup.DI;
 using PatronatGroup.EntityFramework;
 using PatronatGroup.EntityFramework.Models;
+using PatronatGroup.EntityFramework.Seed;
 using System.Text.Json.Serialization;
 
 namespace PatronatGroup
@@ -28,8 +31,15 @@ namespace PatronatGroup
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddControllers();
             services.AddDependencies(Configuration);
+            services.AddControllers(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                                 .RequireAuthenticatedUser()
+                                 .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+            });
+            
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -43,13 +53,10 @@ namespace PatronatGroup
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, UserManager<tUsers> userManager)
         {
             if (env.IsDevelopment())
             {
-                app.UseCors(
-                    options => options.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod()
-                );
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApi v1"));
@@ -61,11 +68,19 @@ namespace PatronatGroup
                 app.UseHsts();
             }
 
+            IdentityDataInitializer.SeedData(userManager);
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
             app.UseRouting();
+
+            app.UseCors(
+                    options => options.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod()
+                );
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

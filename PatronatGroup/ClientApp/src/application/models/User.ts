@@ -1,4 +1,4 @@
 export default interface User {
-  Email: string;
-  Password: string | null;
+  email: string;
+  password: string | null;
 }

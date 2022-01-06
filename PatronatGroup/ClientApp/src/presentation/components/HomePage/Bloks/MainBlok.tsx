@@ -18,7 +18,7 @@ const MainBlok:React.FC = (props:any) => {
                     <Underline />
                 </div>
                 <div className={style.containerMainImg}>
-                    <img src={mainImg} className={style.mainImg} />
+                    <img src={mainImg} alt={mainImg} className={style.mainImg} />
                 </div>
             </div>
     )

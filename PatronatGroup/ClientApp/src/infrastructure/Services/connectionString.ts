@@ -1,10 +1,17 @@
 ﻿import axios, { AxiosError } from 'axios';
+import { store } from '../../application/store/store';
 import notificationService from './notificationService';
 
 export const api = axios.create({
-    baseURL: 'https://localhost:44308/api/'
+    baseURL: 'https://localhost:44308/api/',
 }); 
 
+api.interceptors.request.use(config => {
+    const token = store.getState().administration.admin.token;
+    if(token) config.headers!.Authorization = `Bearer ${token}`
+    return config;
+  })
+  
 api.interceptors.response.use(async response => {
     return await response;
 }, (error: AxiosError) => {

@@ -1,5 +1,5 @@
 import { t } from 'i18next';
-import React, { FC, useEffect } from 'react';
+import React, { FC} from 'react';
 import TranslateHoc from '../../../infrastructure/Common/hoc/TranslateHoc';
 import { labels } from '../../../infrastructure/Common/i18n/translationsServices';
 //components
@@ -9,8 +9,6 @@ import MainBlok from './Bloks/MainBlok';
 import BenefitsBlok from './Bloks/BenefitsBlok';
 import PracticesBlok from './Bloks/PracticesBlok';
 import CommandBlokContainer from './Bloks/CommandBlokContainer';
-//style
-import style from "./Home.module.css";
 //icons
 import aboutCompanyImg from '../../../assets/aboutCompany.png';
 import benefitsImg from '../../../assets/benefitImg.png';

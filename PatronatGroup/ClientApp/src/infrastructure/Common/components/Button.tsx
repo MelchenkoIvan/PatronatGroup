@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import TranslateHoc from "../hoc/TranslateHoc";
 //style
 import style from "./CommonComponentsStyle.module.css";
 interface Props {

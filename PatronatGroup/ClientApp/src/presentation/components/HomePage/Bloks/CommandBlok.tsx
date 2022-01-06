@@ -29,7 +29,7 @@ const CommandBlok: FC<PropsType> = (props) => {
 
   useEffect(() => {
     props.onGetPage();
-  }, [props.onGetPage]);
+  }, [props,props.onGetPage]);
 
   return (
     <div className={style.containerCommand}>

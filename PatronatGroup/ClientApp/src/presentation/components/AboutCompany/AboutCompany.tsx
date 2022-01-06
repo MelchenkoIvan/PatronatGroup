@@ -5,11 +5,9 @@ import TranslateHoc from "../../../infrastructure/Common/hoc/TranslateHoc";
 import { t } from "i18next";
 import { labels } from "../../../infrastructure/Common/i18n/translationsServices";
 import AboutCompanyBlok from "../HomePage/Bloks/AboutCompanyBlok";
-import { useHistory } from "react-router";
 import ToMainButton from "../../../infrastructure/Common/components/ToMainButton";
 
-const AboutCompany: FC = (props) => {
-  const history = useHistory();
+const AboutCompany: FC = () => {
   return (
     <div>
       <Blok

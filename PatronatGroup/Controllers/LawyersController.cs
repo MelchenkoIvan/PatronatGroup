@@ -18,8 +18,8 @@ namespace PatronatGroup.Controllers
         {
             _lawyersFcd = lawyersFcd;
         }
-        [HttpGet("")]
         [AllowAnonymous]
+        [HttpGet("")]
         public ActionResult GetLawyers()
         {
             var lawyers = _lawyersFcd.GetLawyers();
@@ -45,9 +45,8 @@ namespace PatronatGroup.Controllers
             return Ok();
 
         }
-
-        [HttpPost("submit")]
         [AllowAnonymous]
+        [HttpPost("submit")]
         public ActionResult Submit(ToContactUsDTO toContactUs)
         {
             _lawyersFcd.Submit(toContactUs);

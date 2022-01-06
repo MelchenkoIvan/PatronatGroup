@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PatronatGroup.Common.ModelsDTO;
 using PatronatGroup.Interfaces.Facades;
 using System;
@@ -17,22 +18,23 @@ namespace PatronatGroup.Controllers
         {
             _userFcd = userFcd;
         }
-
+        [AllowAnonymous]
         [HttpPost("login")]
-        public async Task<ActionResult<UserDTO>> Login(UserDTO userDTO)
+        public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO)
         {
-            var user = await _userFcd.Login(userDTO);
+            var user = await _userFcd.Login(loginDTO);
             if(user == null) return Unauthorized();
             return Ok(user);
 
         }
         [HttpPost("registr")]
-        public async Task<ActionResult<UserDTO>> Register(UserDTO userDTO)
+        public async Task<ActionResult<UserDTO>> Register(LoginDTO loginDTO)
         {
-            var user = await _userFcd.Register(userDTO);
+            var user = await _userFcd.Register(loginDTO);
             if (user == null) return BadRequest("Problem registering user");
             return Ok(user);
 
         }
+
     }
 }

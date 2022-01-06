@@ -104,6 +104,13 @@
 .textArea:focus {
   outline: 1px solid #c8e6f5;
 }
+.error {
+  background: #fac5c5;
+  border: 1px solid #ff3737;
+}
+.error::placeholder {
+  color:#ff3737;
+}
 /* toMainButton */
 
 .toMainButton{

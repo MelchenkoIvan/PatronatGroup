@@ -2,10 +2,10 @@ import { get } from 'lodash';
 import React from 'react'
 import { connect } from 'react-redux';
 import * as actions from '../../../../application/store/actions/homeActions';
-import { InitialStateType } from '../../../../application/store/initialState';
+import { RootState } from '../../../../application/store/store';
 import CommandBlok from './CommandBlok';
 
-const mapStateToProps = (state:InitialStateType) => {
+const mapStateToProps = (state:RootState) => {
     return{
         command: get(state, 'homePage.command')
     }

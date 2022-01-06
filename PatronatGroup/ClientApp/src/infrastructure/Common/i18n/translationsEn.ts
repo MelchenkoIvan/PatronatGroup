@@ -35,6 +35,14 @@ export const translationsEn = {
     "Ipsum a arcu cursus vitae congue mauris rhoncus." +
     "In cursus turpis massa tincidunt dui ut ornare lectus sit." +
     "Augue ut lectus arcu bibendum at varius vel pharetr",
-
+    
+    //validation
+    nameRequired:"Name is required !",
+    emailRequired:"Email is required !",
+    phoneRequired:"Phone number is required !",
+    descriptionRequired:"Description is required !",
+    invalidEmail:"Invalid email format ",
+    phoneIsNotCorrect:"Phone number is not correct !",
+    maxCharacters:"Max 240 characters !",
 };
 

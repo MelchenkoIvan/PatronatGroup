@@ -20,3 +20,4 @@ C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGro
 C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\PatronatGroup.Common.dll
 C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\ref\PatronatGroup.Common.dll
 C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\PatronatGroup.Common.pdb
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Common\obj\Debug\net5.0\PatronatGroup.Common.csprojAssemblyReference.cache

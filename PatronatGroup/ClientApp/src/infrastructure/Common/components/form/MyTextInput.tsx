@@ -1,6 +1,6 @@
 import { useField } from 'formik';
 import React from 'react'
-import { Form, Label } from 'semantic-ui-react';
+import ReactTooltip from 'react-tooltip';
 //style
 import style from "../CommonComponentsStyle.module.css";
 
@@ -15,9 +15,15 @@ const MyTextInput = (props:Props) => {
     return(
         <div>
             {meta.touched && meta.error ? (
-                //<Label basic color='red'>{meta.error}</Label>
-                <input {...field} {...props} className={style.textInput}/>
+                <div >
+                    <input data-tip data-for={`${props.name}Id`} {...field} {...props} className={`${style.textInput} ${style.error}`}/>
+                    <ReactTooltip backgroundColor='#fcb5b5' textColor='#ff0000' id={`${props.name}Id`} place="top" effect="solid">
+                        {meta.error}
+                    </ReactTooltip>
+                </div>
             ): <input {...field} {...props}  className={style.textInput}/>}
+            
+
         </div>
     )
 }

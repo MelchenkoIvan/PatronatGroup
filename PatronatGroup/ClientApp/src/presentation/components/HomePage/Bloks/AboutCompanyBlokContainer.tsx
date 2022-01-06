@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux';
 import ToContactUs from '../../../../application/models/ToContactUs';
 import * as actions from '../../../../application/store/actions/homeActions';
-import { InitialStateType } from '../../../../application/store/initialState';
+import { RootState } from '../../../../application/store/store';
 import AboutCompanyBlok from './AboutCompanyBlok';
 
-const mapStateToProps = (state:InitialStateType) => {
+const mapStateToProps = (state: RootState) => {
     return{
     }
 };

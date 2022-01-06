@@ -17,19 +17,22 @@ namespace PatronatGroup.EntityFramework.Services
         private readonly UserManager<tUsers> _userManager;
         private readonly SignInManager<tUsers> _signInManager;
 
-        public UserSrv(UserManager<tUsers> userManager, SignInManager<tUsers> signInManager)
+        private readonly TokenService _tokenService;
+
+        public UserSrv(UserManager<tUsers> userManager, SignInManager<tUsers> signInManager, TokenService tokenService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _tokenService = tokenService;
         }
 
-        public async Task<UserDTO> Login(UserDTO userDTO)
+        public async Task<UserDTO> Login(LoginDTO loginDTO)
         {
             
-            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == userDTO.Email);
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == loginDTO.Email);
             if (user == null) return null;
 
-            var result = await _signInManager.CheckPasswordSignInAsync(user, userDTO.Password, false);
+            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDTO.Password, false);
             if (result.Succeeded)
             {
                 return CreateUserObject(user);
@@ -37,18 +40,18 @@ namespace PatronatGroup.EntityFramework.Services
             return null;
         }
 
-        public async Task<UserDTO> Register(UserDTO userDTO)
+        public async Task<UserDTO> Register(LoginDTO loginDTO)
         {
-            if (await _userManager.Users.AnyAsync(x => x.Email == userDTO.Email))
+            if (await _userManager.Users.AnyAsync(x => x.Email == loginDTO.Email))
             {
                 return null;
             }
             var user = new tUsers
             {
-                UserName = userDTO.Email,
-                Email = userDTO.Email
+                UserName = loginDTO.Email,
+                Email = loginDTO.Email
             };
-            var result = await _userManager.CreateAsync(user, userDTO.Password);
+            var result = await _userManager.CreateAsync(user, loginDTO.Password);
             if (result.Succeeded)
             {
                 return CreateUserObject(user);
@@ -61,6 +64,7 @@ namespace PatronatGroup.EntityFramework.Services
             return new UserDTO
             {
                 Email = user.Email,
+                Token = _tokenService.CreateToken(user)
             };
         }
     }

@@ -2,9 +2,9 @@
 import User from '../../application/models/User';
 
 export const userService = {
-    async Login() {
+    async Login(user: User) {
         try {
-            let data = await connectionString.api.post<User>('user/login')
+            let data = await connectionString.api.post<User>('user/login',user)
                 .then(response => response.data);
             return data;
         }

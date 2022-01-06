@@ -37,4 +37,13 @@ export const translationsUa = {
     "Ipsum a arcu cursus vitae congue mauris rhoncus." +
     "In cursus turpis massa tincidunt dui ut ornare lectus sit." +
     "Augue ut lectus arcu bibendum at varius vel pharetr",
+
+    //validation
+    nameRequired:"Имя обязательно!",
+    emailRequired:"Электронная почта обязательна!",
+    phoneRequired:"Номер телефона обязателен!",
+    descriptionRequired:"Описание обязательно!",
+    invalidEmail:"Неверный формат электронной почты",
+    phoneIsNotCorrect:"Номер телефона неверен !",
+    maxCharacters:"Максимум 240 символов!",
 };

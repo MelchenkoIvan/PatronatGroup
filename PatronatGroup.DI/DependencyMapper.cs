@@ -1,10 +1,14 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.IdentityModel.Tokens;
 using PatronatGroup.EntityFramework;
 using PatronatGroup.EntityFramework.AutoMapper;
 using PatronatGroup.EntityFramework.Models;
@@ -41,12 +45,35 @@ namespace PatronatGroup.DI
              .AddEntityFrameworkStores<Context>()
              .AddSignInManager<SignInManager<tUsers>>();
 
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["TokenKey"]));
+
+            serviceCollection.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(opt =>
+                {
+                    opt.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = key,
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+
+                    };
+                });
+            serviceCollection.AddAuthorization(options =>
+            {
+                options.FallbackPolicy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
+            });
+
 
             serviceCollection.AddScoped<IUserFcd, UserFcd>();
             serviceCollection.AddScoped<IUserSrv, UserSrv>();
 
             serviceCollection.AddScoped<ILawyersFcd, LawyersFcd>();
             serviceCollection.AddScoped<ILawyersSrv, LawyersSrv>();
+
+            serviceCollection.AddScoped<TokenService>();
 
 
             var mapperConfig = new MapperConfiguration(mc =>

@@ -1,12 +1,12 @@
+import Client from "../models/Client";
 import { Lawyer } from "../models/Lawyers";
 
 export const initialState = {
     homePage:{
         command:[] as Array<Lawyer>
-    } 
-}; 
-export interface InitialStateType {
-    homePage:{
-        command:[]
-    } 
+    },
+    administration:{
+        admin:{},
+        clients:[] as Array<Client>,
+    }
 }; 

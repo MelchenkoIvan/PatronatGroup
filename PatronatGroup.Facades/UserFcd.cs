@@ -18,14 +18,14 @@ namespace PatronatGroup.Facades
             _userSrv = userSrv;
         }
 
-        public Task<UserDTO> Login(UserDTO userDTO)
+        public Task<UserDTO> Login(LoginDTO loginDTO)
         {
-            return _userSrv.Login(userDTO);
+            return _userSrv.Login(loginDTO);
         }
 
-        public Task<UserDTO> Register(UserDTO userDTO)
+        public Task<UserDTO> Register(LoginDTO loginDTO)
         {
-            return _userSrv.Register(userDTO);
+            return _userSrv.Register(loginDTO);
         }
     }
 }

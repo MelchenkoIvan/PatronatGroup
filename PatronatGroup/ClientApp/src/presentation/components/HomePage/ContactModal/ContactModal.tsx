@@ -1,4 +1,4 @@
-import { Field, Form, Formik, FormikHelpers } from "formik";
+import { Form, Formik} from "formik";
 import { t } from "i18next";
 import React, { FC } from "react";
 import Button from "../../../../infrastructure/Common/components/Button";
@@ -22,10 +22,10 @@ interface Props {
 const ContactModal: FC<Props> = ({ handleClose, show, onSubmit}) => {
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
   const validationSchema = Yup.object({
-    fullName:Yup.string().required('Name is required'),
-    email:Yup.string().email("Invalid email format").required('Email is required'),
-    phoneNumber:Yup.string().required('Phone number is required').matches(phoneRegExp, 'Phone number is not correct !'),
-    description:Yup.string().required('Description is required').max(240, "Max 240 characters"),
+    fullName:Yup.string().required(t(labels.nameRequired)),
+    email:Yup.string().email(t(labels.invalidEmail)).required(t(labels.emailRequired)),
+    phoneNumber:Yup.string().required(t(labels.phoneRequired)).matches(phoneRegExp, t(labels.phoneIsNotCorrect)),
+    description:Yup.string().required(t(labels.descriptionRequired)).max(240, t(labels.maxCharacters)),
   });
 
 

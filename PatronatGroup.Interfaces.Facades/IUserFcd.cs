@@ -10,7 +10,7 @@ namespace PatronatGroup.Interfaces.Facades
 {
     public interface IUserFcd
     {
-        Task<UserDTO> Login(UserDTO userDTO);
-        Task<UserDTO> Register(UserDTO userDTO);
+        Task<UserDTO> Login(LoginDTO loginDTO);
+        Task<UserDTO> Register(LoginDTO loginDTO);
     }
 }
