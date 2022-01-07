@@ -5,9 +5,7 @@ export default class Layout extends React.PureComponent<{}, { children?: React.R
     public render() {
         return (
             <React.Fragment>
-                <Container>
                     {this.props.children}
-                </Container>
             </React.Fragment>
         );
     }

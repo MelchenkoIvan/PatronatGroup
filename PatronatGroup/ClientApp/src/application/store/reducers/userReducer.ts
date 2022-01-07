@@ -2,12 +2,16 @@ import { combineReducers } from "redux";
 import { initialState} from "../initialState";
 
 export const LOAD_ADMIN = "LOAD_ADMIN"
+export const LOGOUT_ADMIN = "LOGOUT_ADMIN"
 export const LOAD_CLIENTS = "LOAD_CLIENTS"
 
 const adminReducer = (state = initialState.administration.admin,action:any) => {
     switch(action.type){
         case LOAD_ADMIN:{
             return{...action.data}
+        }
+        case LOGOUT_ADMIN:{
+            return{}
         }
         default:
             return state;

@@ -1,6 +1,5 @@
 .container{
-    position: absolute;
-    top: 40%;
+    padding-top: 15%;
 }
 .form{
     margin: 0% 30%;

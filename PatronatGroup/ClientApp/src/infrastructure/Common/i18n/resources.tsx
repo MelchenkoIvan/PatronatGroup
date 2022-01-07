@@ -6,6 +6,7 @@ import { initReactI18next } from "react-i18next";
 import style from "./LanguagesButtons.module.css";
 import { translationsUa } from "./translationsUa";
 import { translationsEn } from "./translationsEn";
+import { setCookie } from "../../Services/cookieService";
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -26,6 +27,7 @@ const LenguagesButtons: FC = () => {
         className={style.buttonEn}
         value="en"
         onClick={(e: any) => {
+          setCookie("lang",e.target.value,30);
           i18n.changeLanguage(e.target.value);
         }}
       >
@@ -35,6 +37,7 @@ const LenguagesButtons: FC = () => {
         value="ua"
         className={style.buttonUk}
         onClick={(e: any) => {
+          setCookie("lang",e.target.value,30);
           i18n.changeLanguage(e.target.value);
         }}
       >

@@ -25,6 +25,14 @@ export const labels = {
   email: "email",
   allPartners: "allPartners",
   moreDetails: "moreDetails",
+  clients: "clients",
+  employees: "employees",
+  login: "login",
+  logout: "logout",
+  registerNewAdmin: "registerNewAdmin",
+  password: "password",
+  loginAsAdmin: "loginAsAdmin",
+  
   //validation
   nameRequired:"nameRequired",
   emailRequired:"emailRequired",

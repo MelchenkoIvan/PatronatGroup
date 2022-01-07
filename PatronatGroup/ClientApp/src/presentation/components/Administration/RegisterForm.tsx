@@ -10,15 +10,15 @@ import { labels } from "../../../infrastructure/Common/i18n/translationsServices
 import style from "./Login.module.css";
 
 interface PropsType {
-  login: (user: Login) => Promise<void>;
+  register: (user: Login) => Promise<void>;
 }
 
-const LogiForm: FC<PropsType> = (props) => {
+const RegisterForm: FC<PropsType> = (props) => {
   return (
     <Container className={style.container}>
       <Formik
         initialValues={{ email: "", password: "" }}
-        onSubmit={(values) => props.login(values)}
+        onSubmit={(values) => props.register(values)}
       >
         {({ handleSubmit, isSubmitting }) => (
           <Form
@@ -28,7 +28,7 @@ const LogiForm: FC<PropsType> = (props) => {
           >
             <Header
               as="h2"
-              content={t(labels.loginAsAdmin)}
+              content={t(labels.registerNewAdmin)}
               color="teal"
               textAlign="center"
             />
@@ -37,13 +37,12 @@ const LogiForm: FC<PropsType> = (props) => {
               <MyTextInput
                 name="password"
                 placeholder={t(labels.password)}
-                type="password"
               />
             </div>
             <Button
               loading={isSubmitting}
               positive
-              content={t(labels.login)}
+              content={t(labels.registerNewAdmin)}
               type="submit"
               fluid
             />
@@ -54,4 +53,4 @@ const LogiForm: FC<PropsType> = (props) => {
   );
 };
 
-export default LogiForm;
+export default RegisterForm;

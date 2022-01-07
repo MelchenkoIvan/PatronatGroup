@@ -25,6 +25,13 @@ export const translationsEn = {
     email:"E-mail",
     allPartners:"All partners",
     moreDetails:"More details",
+    clients: "Clients",
+    employees: "Employees",
+    login: "Login",
+    logout: "Logout",
+    registerNewAdmin: "Add new admin",
+    password: "Password",
+    loginAsAdmin: "Login as Admin",
     //descriptions
     taxLawDescriptions:"Lorem ipsum dolor sit amet. " +
     "consectetur adipiscing elit. " +
@@ -35,6 +42,7 @@ export const translationsEn = {
     "Ipsum a arcu cursus vitae congue mauris rhoncus." +
     "In cursus turpis massa tincidunt dui ut ornare lectus sit." +
     "Augue ut lectus arcu bibendum at varius vel pharetr",
+
     
     //validation
     nameRequired:"Name is required !",

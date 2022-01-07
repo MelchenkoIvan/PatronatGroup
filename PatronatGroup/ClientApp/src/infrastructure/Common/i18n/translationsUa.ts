@@ -25,6 +25,13 @@ export const translationsUa = {
     email:"Электронная почта",
     allPartners:"Все партнеры",
     moreDetails:"Подробнее",
+    clients: "Клиенты",
+    employees: "Сотрудники",
+    login: "Авторизоваться",
+    logout: "Выйти",
+    registerNewAdmin: "Добавить нового администратора",
+    password: "Пароль",
+    loginAsAdmin: "Войти как администратор",
 
     //descriptions
     taxLawDescriptions:

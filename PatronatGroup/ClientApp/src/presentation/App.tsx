@@ -1,8 +1,7 @@
-import React, { FC } from "react";
-//components
+import React, { FC, useEffect } from "react";
 import Layout from "./components/Layout";
 import TranslateHoc from "../infrastructure/Common/hoc/TranslateHoc";
-import { Route, useRouteMatch } from "react-router";
+import { Route, useHistory } from "react-router";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import AboutCompany from "./components/AboutCompany/AboutCompany";
@@ -12,10 +11,17 @@ import Command from "./components/Command/Command";
 import Home from "./components/HomePage/Home";
 import LoginFormContainer from "./components/Administration/LoginFormContainer";
 import { connect } from "react-redux";
-import User from "../application/models/User";
+import {User} from "../application/models/User";
 import { RootState } from "../application/store/store";
 import { ToastContainer } from "react-toastify";
-import AdminPage from "./components/Administration/Content/AdminPage";
+import { getCookie } from "../infrastructure/Services/cookieService";
+import i18next from "i18next";
+import NavBarContainer from "./components/Administration/Content/Menu/NavBarContainer";
+import { get } from "lodash";
+import ClientsContainer from "./components/Administration/Content/Clients/ClientsContainer";
+import EmployeesContainer from "./components/Administration/Content/Employees/EmployeesContainer";
+import RegisterFormContainer from "./components/Administration/RegisterFormContainer";
+import * as actions from "../application/store/actions/adminActions"
 //styles
 import "semantic-ui-css/semantic.min.css";
 import "slick-carousel/slick/slick.css";
@@ -23,22 +29,45 @@ import "slick-carousel/slick/slick-theme.css";
 import "../custom.css";
 import "react-toastify/dist/ReactToastify.css";
 
-interface PropsType{
-  admin: User
+
+
+interface PropsType {
+  admin: User;
+  onGetPage: () => void;
 }
-const App:FC<PropsType> = ({admin}) => {
-  let match = useRouteMatch("/admin");
+const App: FC<PropsType> = ({ admin, onGetPage}) => {
+  let history = useHistory();
+  let isExact = history.location.pathname.includes("/admin");
+
+  useEffect(() => {
+    const cookieLang = getCookie("lang");
+    
+    i18next.changeLanguage(cookieLang);
+
+    if(isExact){
+      const cookieToken = getCookie("token");
+      cookieToken !== "" && onGetPage();
+      cookieToken == "" && history.replace("/admin") ;
+    }
+  },[isExact,history,onGetPage]);
+  
 
   return (
     <Layout>
       <ToastContainer position="bottom-right" hideProgressBar />
-      {match?.isExact ? (
-      <div>
-          {!admin.email ? <Route exact path="/admin" component={LoginFormContainer} /> 
-          : <Route exact path="/admin" component={AdminPage} /> }
-         
-      </div>
-       
+      {isExact ? (
+        <div>
+          {!admin.token ? (
+            <Route exact path="/admin" component={LoginFormContainer} />
+          ) : (
+            <>
+              <NavBarContainer />
+              <Route exact path="/admin/clients" component={ClientsContainer} />
+              <Route exact path="/admin/employees" component={EmployeesContainer} />
+              <Route exact path="/admin/newAdmin" component={RegisterFormContainer} />
+            </>
+          )}
+        </div>
       ) : (
         <div className="containerLayout">
           <Header />
@@ -54,15 +83,15 @@ const App:FC<PropsType> = ({admin}) => {
   );
 };
 
-
-const mapStateToProps = (state:RootState) => {
-  return{
-    admin: state.administration.admin
-  }
+const mapStateToProps = (state: RootState) => {
+  return {
+    admin: get(state, "administration.admin"),
+  };
 };
-let mapDispatchToProps = (dispatch:any) =>{
-  return{
-  }
+let mapDispatchToProps = (dispatch: any) => {
+  return {
+    onGetPage: () => dispatch(actions.GetCurrentUser())
+  };
 };
 
 const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);

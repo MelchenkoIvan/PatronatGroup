@@ -1,5 +1,5 @@
 ﻿import axios, { AxiosError } from 'axios';
-import { store } from '../../application/store/store';
+import { getCookie } from './cookieService';
 import notificationService from './notificationService';
 
 export const api = axios.create({
@@ -7,7 +7,7 @@ export const api = axios.create({
 }); 
 
 api.interceptors.request.use(config => {
-    const token = store.getState().administration.admin.token;
+    const token = getCookie("token");
     if(token) config.headers!.Authorization = `Bearer ${token}`
     return config;
   })

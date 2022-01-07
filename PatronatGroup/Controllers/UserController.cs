@@ -23,7 +23,7 @@ namespace PatronatGroup.Controllers
         public async Task<ActionResult<UserDTO>> Login(LoginDTO loginDTO)
         {
             var user = await _userFcd.Login(loginDTO);
-            if(user == null) return Unauthorized();
+            if (user == null) return Unauthorized();
             return Ok(user);
 
         }
@@ -35,6 +35,11 @@ namespace PatronatGroup.Controllers
             return Ok(user);
 
         }
-
+        [HttpGet]
+        public async Task<ActionResult<UserDTO>> GetCurrentUser()
+        {
+            var user = await _userFcd.GetCurrentUser(User);
+            return Ok(user);
+        }
     }
 }

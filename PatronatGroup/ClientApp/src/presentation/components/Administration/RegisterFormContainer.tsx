@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import LoginForm from './LoginForm';
 import * as actions from '../../../application/store/actions/adminActions'
 import { RootState } from '../../../application/store/store';
 import { Login } from '../../../application/models/User';
+import RegisterForm from './RegisterForm';
 
 
 const mapStateToProps = (state:RootState) => {
@@ -11,10 +11,10 @@ const mapStateToProps = (state:RootState) => {
 };
 let mapDispatchToProps = (dispatch:any) =>{
     return{
-        login: (user:Login) => dispatch(actions.Login(user))
+        register: (user:Login) => dispatch(actions.Register(user))
     }
 };
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+export default connect(mapStateToProps, mapDispatchToProps)(RegisterForm);

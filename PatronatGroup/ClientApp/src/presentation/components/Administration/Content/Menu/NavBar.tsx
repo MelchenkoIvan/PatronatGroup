@@ -1,48 +1,45 @@
+import { t } from "i18next";
 import React, { FC } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { Button, Container, Menu, Image, Dropdown } from "semantic-ui-react";
-import User from "../../../../../application/models/User";
-
+import { NavLink } from "react-router-dom";
+import { Container, Menu, Image, Dropdown } from "semantic-ui-react";
+import {User} from "../../../../../application/models/User";
+import LenguagesButtons from "../../../../../infrastructure/Common/i18n/resources";
+import { labels } from "../../../../../infrastructure/Common/i18n/translationsServices";
+//icon
+import logoImg from "../../../../../assets/LOGO.png";
+import userImg from "../../../../../assets/user.png";
 interface PropsTypes {
   admin: User,
-  onGetPage:() => void
+  Logout:() => void
 }
-const NavBar:FC<PropsTypes> = ({admin,onGetPage}) => {
-  const logout =() => {
-    onGetPage();
-  }
+const NavBar:FC<PropsTypes> = ({admin,Logout}) => {
   return (
-    <Menu inverted fixed="top">
+      <Menu inverted fluid>
       <Container>
         <Menu.Item as={NavLink} to="/" exact header>
           <img
-            src="/assets/logo.png"
+            src={logoImg}
             alt="logo"
             style={{ marginRight: "10px" }}
           />
         </Menu.Item>
-        <Menu.Item as={NavLink} to="/activities" name="Activities" />
-        <Menu.Item as={NavLink} to="/errors" name="Errors" />
-        <Menu.Item>
-          <Button
-            as={NavLink}
-            to="/createActivity"
-            positive
-            content="Create Activity"
-          ></Button>
-        </Menu.Item>
+        <Menu.Item as={NavLink} to="/admin/clients" name={t(labels.clients)}/>
+        <Menu.Item as={NavLink} to="/admin/employees" name={t(labels.employees)} />
         <Menu.Item position="right">
           <Image
-            //src={admin?.image || "/assets/user.png"}
+            src={userImg}
             avatar
             spaced="right"
           />
           <Dropdown pointing="top left" text={admin.email}>
             <Dropdown.Menu>
-
-              <Dropdown.Item onClick={logout} text="Logout" icon="power" />
+              <Dropdown.Item as={NavLink} to="/admin/newAdmin"text={t(labels.registerNewAdmin)} icon="add user" />
+              <Dropdown.Item onClick={Logout} text={t(labels.logout)} icon="power" />
             </Dropdown.Menu>
           </Dropdown>
+        </Menu.Item>
+        <Menu.Item>
+          <LenguagesButtons />
         </Menu.Item>
       </Container>
     </Menu>

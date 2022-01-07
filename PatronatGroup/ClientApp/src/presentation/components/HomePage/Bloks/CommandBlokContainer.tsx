@@ -1,5 +1,4 @@
 import { get } from 'lodash';
-import React from 'react'
 import { connect } from 'react-redux';
 import * as actions from '../../../../application/store/actions/homeActions';
 import { RootState } from '../../../../application/store/store';

@@ -6,6 +6,7 @@ using PatronatGroup.Interfaces.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,6 @@ namespace PatronatGroup.EntityFramework.Services
     {
         private readonly UserManager<tUsers> _userManager;
         private readonly SignInManager<tUsers> _signInManager;
-
         private readonly TokenService _tokenService;
 
         public UserSrv(UserManager<tUsers> userManager, SignInManager<tUsers> signInManager, TokenService tokenService)
@@ -24,6 +24,14 @@ namespace PatronatGroup.EntityFramework.Services
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenService = tokenService;
+        }
+
+        public async Task<UserDTO> GetCurrentUser(ClaimsPrincipal User)
+        {
+            var user = await _userManager.Users
+               .FirstOrDefaultAsync(x => x.Email == User.FindFirstValue(ClaimTypes.Email));
+
+            return CreateUserObject(user);
         }
 
         public async Task<UserDTO> Login(LoginDTO loginDTO)
