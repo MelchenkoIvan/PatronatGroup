@@ -26,15 +26,14 @@ namespace PatronatGroup.Facades
         {
             _lawyersSrv.DeleteLawyer(lawyerId);
         }
-
-        public List<ToContactUsDTO> GetClients()
+        public ToContactUsSR GetClients(ToContactUsSC sc)
         {
-            return _lawyersSrv.GetClients();
+            return _lawyersSrv.GetClients(sc);
         }
 
-        public List<LawyersDTO> GetLawyers()
+        public LawyersSR GetLawyers(LawyersSC sc)
         {
-            return _lawyersSrv.GetLawyers();
+            return _lawyersSrv.GetLawyers(sc);
         }
 
         public void Submit(ToContactUsDTO toContactUs)

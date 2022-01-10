@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PatronatGroup.Common.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,4 +19,14 @@ namespace PatronatGroup.Common.ModelsDTO
 
         public string Description { get; set; }
     }
+
+    public class ToContactUsSR : SearchResult<ToContactUsDTO>
+    {
+    }
+
+    public class ToContactUsSC : SearchCriteria
+    {
+        public string Search { get; set; }
+    }
+
 }

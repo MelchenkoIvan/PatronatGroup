@@ -1,7 +1,8 @@
 import { t } from "i18next";
 import React,{ FC, useEffect } from "react";
-import { Container, Table } from "semantic-ui-react";
+import { Button, Container, Icon, Table } from "semantic-ui-react";
 import { Lawyer } from "../../../../../application/models/Lawyers";
+import TablePaginationg from "../../../../../infrastructure/Common/components/TablePaginationg";
 import { labels } from "../../../../../infrastructure/Common/i18n/translationsServices";
 
 
@@ -35,6 +36,23 @@ const Employees: FC<PropsType> = (props) => {
           </Table.Row>
         ))}
       </Table.Body>
+      <Table.Footer fullWidth>
+          <Table.Row>
+            <Table.HeaderCell />
+            <Table.HeaderCell colSpan="4">
+              <Button
+                floated="right"
+                icon
+                labelPosition="left"
+                primary
+                size="small"
+              >
+                <Icon name="user" /> Add User
+              </Button>
+             <TablePaginationg/>
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Footer>
     </Table>
   </Container>
   );

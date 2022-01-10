@@ -19,10 +19,10 @@ namespace PatronatGroup.Controllers
             _lawyersFcd = lawyersFcd;
         }
         [AllowAnonymous]
-        [HttpGet("")]
-        public ActionResult GetLawyers()
+        [HttpPost("lawyers")]
+        public ActionResult<LawyersSR> GetLawyers(LawyersSC sc)
         {
-            var lawyers = _lawyersFcd.GetLawyers();
+            var lawyers = _lawyersFcd.GetLawyers(sc);
             return Ok(lawyers);
 
         }
@@ -52,10 +52,11 @@ namespace PatronatGroup.Controllers
             _lawyersFcd.Submit(toContactUs);
             return Ok();
         }
-        [HttpGet("clients")]
-        public ActionResult<List<ToContactUsDTO>> GetClients()
+        [AllowAnonymous]
+        [HttpPost("clients")]
+        public ActionResult<ToContactUsSR> GetClients(ToContactUsSC sc)
         {
-            var clients = _lawyersFcd.GetClients();
+            var clients = _lawyersFcd.GetClients(sc);
             return Ok(clients);
         }
 

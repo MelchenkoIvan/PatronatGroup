@@ -14,6 +14,7 @@ namespace PatronatGroup.EntityFramework.Services
     {
         private readonly Context _appDbContext;
         private readonly IMapper _mapper;
+        private readonly string dateFormat = "yyyy-MM-dd";
 
 
         public LawyersSrv(Context appDbContext, IMapper mapper)
@@ -34,14 +35,46 @@ namespace PatronatGroup.EntityFramework.Services
             _appDbContext.SaveChangesAsync();
         }
 
-        public List<ToContactUsDTO> GetClients()
+        public ToContactUsSR GetClients(ToContactUsSC sc)
         {
-            return _mapper.Map<List<ToContactUsDTO>>(_appDbContext.tToContactUs).ToList();
+            var clients = _mapper.Map<List<ToContactUsDTO>>(_appDbContext.tToContactUs).ToList();
+            if(sc.Search != null)
+            {
+                var simpleSearch = sc.Search.ToLower();
+
+                clients = clients.Where(x => x.FullName.ToLower().Contains(simpleSearch) ||
+                                            x.PhoneNumber.ToLower().Contains(simpleSearch) ||
+                                            x.Email.ToLower().Contains(simpleSearch) ||
+                                            x.Description.ToLower().Contains(simpleSearch)).ToList();
+                                            //x.Description.ToString(dateFormat).Contains(simpleSearch).ToLis ;
+            }
+            return new ToContactUsSR()
+            {
+                CurrentPageNumber = sc.PageNumber,
+                TotalCount = clients.Count(),
+                Items = clients.Skip((sc.PageNumber - 1) * sc.RowsOnPage).Take(sc.RowsOnPage)
+                .ToList()
+            };
         }
 
-        public List<LawyersDTO> GetLawyers()
+        public LawyersSR GetLawyers(LawyersSC sc)
         {
-            return _mapper.Map<List<LawyersDTO>>(_appDbContext.tLawyers).ToList();
+            var lawyers = _mapper.Map<List<LawyersDTO>>(_appDbContext.tLawyers).ToList();
+            if (sc.Search != null)
+            {
+                var simpleSearch = sc.Search.ToLower();
+
+                lawyers = lawyers.Where(x => x.FullName.ToLower().Contains(simpleSearch) ||
+                                            x.Description.ToLower().Contains(simpleSearch) ||
+                                            x.Position.ToLower().Contains(simpleSearch)).ToList();
+            }
+            return new LawyersSR()
+            {
+                CurrentPageNumber = sc.PageNumber,
+                TotalCount = lawyers.Count(),
+                Items = lawyers.Skip((sc.PageNumber - 1) * sc.RowsOnPage).Take(sc.RowsOnPage)
+                .ToList()
+            };
         }
 
         public void Submit(ToContactUsDTO toContactUs)

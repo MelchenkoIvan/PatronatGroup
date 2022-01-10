@@ -1,10 +1,8 @@
 import { t } from "i18next";
 import React, { FC, useEffect } from "react";
-import { Container, Table } from "semantic-ui-react";
+import { Button, Container, Icon, Table } from "semantic-ui-react";
 import Client from "../../../../../application/models/Client";
 import { labels } from "../../../../../infrastructure/Common/i18n/translationsServices";
-
-
 
 interface PropsType {
   clients: Array<Client>;
@@ -16,7 +14,7 @@ const Clients: FC<PropsType> = (props) => {
     props.onGetPage();
   }, [props.onGetPage]);
   return (
-    <Container style={{marginTop:"2%"}}>
+    <Container style={{ marginTop: "2%" }}>
       <Table sortable celled>
         <Table.Header>
           <Table.Row>
@@ -36,6 +34,26 @@ const Clients: FC<PropsType> = (props) => {
             </Table.Row>
           ))}
         </Table.Body>
+        <Table.Footer fullWidth>
+          <Table.Row>
+            <Table.HeaderCell />
+            <Table.HeaderCell colSpan="4">
+              <Button
+                floated="right"
+                icon
+                labelPosition="left"
+                primary
+                size="small"
+              >
+                <Icon name="user" /> Add User
+              </Button>
+              <Button size="small">Approve</Button>
+              <Button disabled size="small">
+                Approve All
+              </Button>
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Footer>
       </Table>
     </Container>
   );
