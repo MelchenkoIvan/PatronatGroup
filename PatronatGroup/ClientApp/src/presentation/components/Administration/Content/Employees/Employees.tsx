@@ -2,18 +2,23 @@ import { t } from "i18next";
 import React,{ FC, useEffect } from "react";
 import { Button, Container, Icon, Table } from "semantic-ui-react";
 import { Lawyer } from "../../../../../application/models/Lawyers";
+import Sc from "../../../../../application/models/Sc";
 import TablePaginationg from "../../../../../infrastructure/Common/components/TablePaginationg";
 import { labels } from "../../../../../infrastructure/Common/i18n/translationsServices";
 
-
+interface SR {
+  totalCount: number,
+  currentPageNumber: number,
+  items: Array<Lawyer>;
+}
 interface PropsType {
-  lawyers: Array<Lawyer>;
-  onGetPage: () => void;
+  lawyers: SR,
+  onGetPage: (sc:Sc) => void;
 }
 
 const Employees: FC<PropsType> = (props) => {
   useEffect(() => {
-    props.onGetPage();
+    props.onGetPage({rowsOnPage:1, pageNumber:1}as Sc);
   }, [props.onGetPage]);
   return (
     <Container style={{marginTop:"2%"}}>
@@ -27,7 +32,7 @@ const Employees: FC<PropsType> = (props) => {
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {props.lawyers.map((x) => (
+        {props.lawyers.items.map((x) => (
           <Table.Row key={x.id}>
             <Table.Cell>{x.fullName}</Table.Cell>
             <Table.Cell>{x.email}</Table.Cell>
@@ -49,7 +54,7 @@ const Employees: FC<PropsType> = (props) => {
               >
                 <Icon name="user" /> Add User
               </Button>
-             <TablePaginationg/>
+             <TablePaginationg onCnahge={props.onGetPage} totalCount={props.lawyers.totalCount} currentPageNumber={props.lawyers.currentPageNumber}/>
             </Table.HeaderCell>
           </Table.Row>
         </Table.Footer>

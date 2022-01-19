@@ -20,7 +20,7 @@ namespace PatronatGroup.Controllers
         }
         [AllowAnonymous]
         [HttpPost("lawyers")]
-        public ActionResult<LawyersSR> GetLawyers(LawyersSC sc)
+        public ActionResult<LawyersSR> GetLawyers([FromBody]LawyersSC sc)
         {
             var lawyers = _lawyersFcd.GetLawyers(sc);
             return Ok(lawyers);
@@ -52,7 +52,6 @@ namespace PatronatGroup.Controllers
             _lawyersFcd.Submit(toContactUs);
             return Ok();
         }
-        [AllowAnonymous]
         [HttpPost("clients")]
         public ActionResult<ToContactUsSR> GetClients(ToContactUsSC sc)
         {

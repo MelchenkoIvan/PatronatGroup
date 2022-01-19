@@ -1,5 +1,6 @@
 import { get } from 'lodash';
 import { connect } from 'react-redux';
+import Sc from '../../../../application/models/Sc';
 import * as actions from '../../../../application/store/actions/homeActions';
 import { RootState } from '../../../../application/store/store';
 import CommandBlok from './CommandBlok';
@@ -11,7 +12,7 @@ const mapStateToProps = (state:RootState) => {
 };
 let mapDispatchToProps = (dispatch:any) =>{
     return{
-        onGetPage: () => dispatch(actions.GetLawyers())
+        onGetPage: (sc:Sc) => dispatch(actions.GetLawyers(sc))
     }
 };
 

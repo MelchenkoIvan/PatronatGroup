@@ -2,11 +2,12 @@ import * as connectionString from './connectionString';
 import Lawyers from '../../application/models/Lawyers';
 import ToContactUs from '../../application/models/ToContactUs';
 import notificationService from './notificationService';
+import Sc from '../../application/models/Sc';
 
 export const lawyersService = {
-    async GetLawyers() {
+    async GetLawyers(sc:Sc) {
         try {
-            let data = await connectionString.api.get<Lawyers>('lawyers')
+            let data = await connectionString.api.post<Lawyers>('lawyers/lawyers',sc)
                 .then(response => response.data);
             return data;
         }
@@ -58,9 +59,9 @@ export const lawyersService = {
             console.log(e);
         }
     },
-    async GetClients() {
+    async GetClients(sc:Sc) {
         try {
-            let data = await connectionString.api.get<ToContactUs>('lawyers/clients')
+            let data = await connectionString.api.post<ToContactUs>('lawyers/clients', sc)
                 .then(response => response.data);
             return data;
         }

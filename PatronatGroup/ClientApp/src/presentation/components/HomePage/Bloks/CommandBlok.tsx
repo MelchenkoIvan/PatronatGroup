@@ -10,10 +10,16 @@ import style from "./Bloks.module.css";
 //icons
 import exImg from "../../../../assets/exampleImg.png";
 import { Lawyer } from "../../../../application/models/Lawyers";
+import Sc from "../../../../application/models/Sc";
 
+interface SR {
+  pageNumber: number,
+  rowsOnPage: number,
+  items: Array<Lawyer>;
+}
 interface PropsType {
-  onGetPage: () => void;
-  command: Array<Lawyer>;
+  onGetPage: (sc:Sc) => void;
+  command: SR;
 }
 
 const CommandBlok: FC<PropsType> = (props) => {
@@ -28,13 +34,13 @@ const CommandBlok: FC<PropsType> = (props) => {
   const history = useHistory();
 
   useEffect(() => {
-    props.onGetPage();
-  }, [props,props.onGetPage]);
+    props.onGetPage({rowsOnPage:20,pageNumber:1} as Sc);
+  },[props.onGetPage]);
 
   return (
     <div className={style.containerCommand}>
       <Slider {...settings} className={style.slider}>
-        {props.command && props.command.map((x) => (
+        {props.command && props.command.items.map((x) => (
           <div key={x.id.toString()}>
             <CommandSkeleton
               isSlider

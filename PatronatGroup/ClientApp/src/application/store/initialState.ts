@@ -3,10 +3,18 @@ import { Lawyer } from "../models/Lawyers";
 
 export const initialState = {
     homePage:{
-        command:[] as Array<Lawyer>
+        command:{
+            totalCount: 0,
+            currentPageNumber: 0,
+            items:[]as Array<Lawyer>
+        } 
     },
     administration:{
         admin:{},
-        clients:[] as Array<Client>,
+        clients:{
+            totalCount: 0,
+            currentPageNumber: 0,
+            items:[]as Array<Client>,
+        }
     }
 }; 

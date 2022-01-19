@@ -1,11 +1,12 @@
 import { setCookie } from "../../../infrastructure/Services/cookieService";
 import { lawyersService } from "../../../infrastructure/Services/lawyersService";
 import { userService } from "../../../infrastructure/Services/userService";
+import Sc from "../../models/Sc";
 import { Login as LoginUser} from "../../models/User";
 import { LOAD_ADMIN, LOAD_CLIENTS, LOGOUT_ADMIN } from "../reducers/userReducer";
 
-export const GetClients = () => async (dispatch: any) => {
-   await lawyersService.GetClients().then(data => {
+export const GetClients = (sc:Sc) => async (dispatch: any) => {
+   await lawyersService.GetClients(sc).then(data => {
         if(data != null){
             dispatch({
                 type: LOAD_CLIENTS,

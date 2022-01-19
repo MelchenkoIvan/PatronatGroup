@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import TranslateHoc from "../../../../../infrastructure/Common/hoc/TranslateHoc";
 import Clients from "./Clients";
 import { get } from "lodash";
+import Sc from "../../../../../application/models/Sc";
 
 const mapStateToProps = (state: RootState) => {
   return {
@@ -12,7 +13,7 @@ const mapStateToProps = (state: RootState) => {
 };
 let mapDispatchToProps = (dispatch: any) => {
   return {
-    onGetPage: () => dispatch(actions.GetClients()),
+    onGetPage: (sc:Sc) => dispatch(actions.GetClients(sc)),
   };
 };
 

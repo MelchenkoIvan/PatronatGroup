@@ -20,7 +20,7 @@ const adminReducer = (state = initialState.administration.admin,action:any) => {
 const clientsReducer = (state = initialState.administration.clients,action:any) => {
     switch(action.type){
         case LOAD_CLIENTS:{
-            return[...action.data]
+            return{...action.data}
         }
         default:
             return state;

@@ -30,7 +30,7 @@ namespace PatronatGroup.Facades
         {
             return _lawyersSrv.GetClients(sc);
         }
-
+        
         public LawyersSR GetLawyers(LawyersSC sc)
         {
             return _lawyersSrv.GetLawyers(sc);
