@@ -16,5 +16,6 @@ namespace PatronatGroup.EntityFramework
         public DbSet<tUsers> tUsers { get; set; }
         public DbSet<tLawyers> tLawyers { get; set; }
         public DbSet<tToContactUs> tToContactUs { get; set; }
+        public DbSet<tClients> tClients { get; set; }
     }
 }

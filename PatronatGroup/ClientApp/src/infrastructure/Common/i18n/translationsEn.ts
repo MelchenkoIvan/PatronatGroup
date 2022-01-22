@@ -32,6 +32,15 @@ export const translationsEn = {
     registerNewAdmin: "Add new admin",
     password: "Password",
     loginAsAdmin: "Login as Admin",
+    areYouSure: "Are you sure ?",
+    thisRequestDeleted:"This request will be deleted and you will not be able to return it !",
+    yes:"Yes",
+    no:"No",
+    delete:"Delete",
+    position:"Position",
+    actions:"Actions",
+    thisEmployeeDeleted:"This employee will be deleted and you will not be able to return him !",
+
     //descriptions
     taxLawDescriptions:"Lorem ipsum dolor sit amet. " +
     "consectetur adipiscing elit. " +

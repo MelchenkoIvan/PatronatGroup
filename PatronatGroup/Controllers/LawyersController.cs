@@ -38,10 +38,17 @@ namespace PatronatGroup.Controllers
             _lawyersFcd.UpdateLawyer(lawyerDTO);
             return Ok();
         }
-        [HttpDelete("")]
+        [HttpDelete("{lawyerId:int}")]
         public ActionResult DeleteLawyer(int lawyerId)
         {
             _lawyersFcd.DeleteLawyer(lawyerId);
+            return Ok();
+
+        }
+        [HttpDelete("client/{id:int}")]
+        public ActionResult DeleteToContactUsClient(int id)
+        {
+            _lawyersFcd.DeleteToContactUsClient(id);
             return Ok();
 
         }

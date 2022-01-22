@@ -26,6 +26,12 @@ namespace PatronatGroup.Facades
         {
             _lawyersSrv.DeleteLawyer(lawyerId);
         }
+
+        public void DeleteToContactUsClient(int id)
+        {
+            _lawyersSrv.DeleteToContactUsClient(id);
+        }
+
         public ToContactUsSR GetClients(ToContactUsSC sc)
         {
             return _lawyersSrv.GetClients(sc);

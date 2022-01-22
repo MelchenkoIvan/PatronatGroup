@@ -32,7 +32,14 @@ export const translationsUa = {
     registerNewAdmin: "Добавить нового администратора",
     password: "Пароль",
     loginAsAdmin: "Войти как администратор",
-
+    areYouSure: "Уверены ли вы ?",
+    thisRequestDeleted:"Эта заявка будет удалена и у вас не будет возможности ее вернуть !",
+    yes:"Да",
+    no:"Нет",
+    delete:"Удалить",
+    position:"Должность",
+    actions:"Действия",
+    thisEmployeeDeleted:"Этот сотрудник будет удален и у вас не будет возможности ее вернуть !",
     //descriptions
     taxLawDescriptions:
     "Lorem ipsum dolor sit amet. " +

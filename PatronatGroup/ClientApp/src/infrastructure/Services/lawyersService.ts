@@ -36,9 +36,13 @@ export const lawyersService = {
         }
     },
     async DeleteLawyer(lawyerId: number) {
+        console.log(lawyerId)
         try {
-            let data = await connectionString.api.delete('lawyers', {data:{lawyerId}})
-                .then(response => response.data);
+            let data = await connectionString.api.delete(`lawyers/${lawyerId}`)
+                .then(response => response);
+                if(data.status == 200){
+                    notificationService.Successful();
+                }
             return data;
         }
         catch (e) {
@@ -63,6 +67,19 @@ export const lawyersService = {
         try {
             let data = await connectionString.api.post<ToContactUs>('lawyers/clients', sc)
                 .then(response => response.data);
+            return data;
+        }
+        catch (e) {
+            console.log(e);
+        }
+    },
+    async DeleteClient(id: number) {
+        try {
+            let data = await connectionString.api.delete(`lawyers/client/${id}`)
+                .then(response => response);
+            if(data.status == 200){
+                notificationService.Successful();
+            }
             return data;
         }
         catch (e) {

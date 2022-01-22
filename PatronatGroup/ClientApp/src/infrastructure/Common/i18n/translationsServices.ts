@@ -32,6 +32,15 @@ export const labels = {
   registerNewAdmin: "registerNewAdmin",
   password: "password",
   loginAsAdmin: "loginAsAdmin",
+  areYouSure:"areYouSure",
+  thisRequestDeleted:"thisRequestDeleted",
+  yes:"yes",
+  no:"no",
+  delete:"delete",
+  position:"position",
+  actions:"actions",
+  thisEmployeeDeleted:"thisEmployeeDeleted",
+
   
   //validation
   nameRequired:"nameRequired",

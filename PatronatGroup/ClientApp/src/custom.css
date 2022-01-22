@@ -47,3 +47,10 @@ body{
 .socialIcon{
   margin: 0 7px;
 }
+/* Modal*/
+.modals.dimmer .ui.scrolling.modal {
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,4 +1,5 @@
 export default interface Sc {
     pageNumber: number,
-    rowsOnPage: number
+    rowsOnPage: number,
+    search?: string,
 }

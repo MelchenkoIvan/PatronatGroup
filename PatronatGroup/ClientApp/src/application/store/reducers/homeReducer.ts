@@ -7,10 +7,9 @@ const commandReducer = (state = initialState.homePage.command,action:any) => {
     switch(action.type){
         case LOAD_COMMAND:{
             return{
+                ...state,
                 ...action.data
             }
-                
-            
         }
         default:
             return state;

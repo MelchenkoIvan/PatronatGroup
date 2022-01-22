@@ -4,6 +4,7 @@ import { initialState} from "../initialState";
 export const LOAD_ADMIN = "LOAD_ADMIN"
 export const LOGOUT_ADMIN = "LOGOUT_ADMIN"
 export const LOAD_CLIENTS = "LOAD_CLIENTS"
+export const SEARCH_CLIENTS = "SEARCH_CLIENTS"
 
 const adminReducer = (state = initialState.administration.admin,action:any) => {
     switch(action.type){
@@ -20,7 +21,20 @@ const adminReducer = (state = initialState.administration.admin,action:any) => {
 const clientsReducer = (state = initialState.administration.clients,action:any) => {
     switch(action.type){
         case LOAD_CLIENTS:{
-            return{...action.data}
+            return{
+                ...state,
+                ...action.data,
+                simpleSearch:{
+                    ...state.simpleSearch,
+                    ...action.data.simpleSearch
+                }
+            }
+        }
+        case SEARCH_CLIENTS:{
+            return{
+                ...state,
+                simpleSearch:{...action.data}
+            }
         }
         default:
             return state;

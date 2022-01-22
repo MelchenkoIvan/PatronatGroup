@@ -14,7 +14,6 @@ namespace PatronatGroup.EntityFramework.AutoMapper
         public MappingProfile()
         {
             CreateMap<tLawyers, LawyersDTO>().ReverseMap();
-            CreateMap<tToContactUs, ToContactUsDTO>().ReverseMap();
         }
     }
 }

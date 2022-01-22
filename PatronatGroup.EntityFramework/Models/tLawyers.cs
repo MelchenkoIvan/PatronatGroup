@@ -17,5 +17,13 @@ namespace PatronatGroup.EntityFramework.Models
         public string Description { get; set; }
 
         public string Position { get; set; }
+
+        public string Image { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+
+        public bool IsDeleted { get; set; }
+
+        public DateTime? DeletedOn { get; set; }
     }
 }

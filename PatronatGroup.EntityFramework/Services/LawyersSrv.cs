@@ -14,7 +14,7 @@ namespace PatronatGroup.EntityFramework.Services
     {
         private readonly Context _appDbContext;
         private readonly IMapper _mapper;
-        private readonly string dateFormat = "yyyy-MM-dd";
+        //private readonly string dateFormat = "yyyy-MM-dd";
 
 
         public LawyersSrv(Context appDbContext, IMapper mapper)
@@ -24,21 +24,42 @@ namespace PatronatGroup.EntityFramework.Services
         }
         public void CreateLawyer(LawyersDTO lawyerDTO)
         {
-            _appDbContext.tLawyers.Add(_mapper.Map<tLawyers>(lawyerDTO));
+            var lawyer = _mapper.Map<tLawyers>(lawyerDTO);
+            lawyer.CreatedOn = DateTime.Now;
+            _appDbContext.tLawyers.Add(lawyer);
             _appDbContext.SaveChanges();
         }
 
         public void DeleteLawyer(int lawyerId)
         {
             var lawyer = _appDbContext.tLawyers.FirstOrDefault(x => x.Id == lawyerId);
-            _appDbContext.tLawyers.Remove(lawyer);
-            _appDbContext.SaveChangesAsync();
+            lawyer.IsDeleted = true;
+            lawyer.DeletedOn = DateTime.Now;
+            _appDbContext.SaveChanges();
+        }
+        public void DeleteToContactUsClient(int id)
+        {
+            var toContactUs = _appDbContext.tToContactUs.FirstOrDefault(x => x.ClientId == id);
+            toContactUs.IsDeleted = true;
+            toContactUs.DeletedOn = DateTime.Now;
+            _appDbContext.SaveChanges();
         }
 
         public ToContactUsSR GetClients(ToContactUsSC sc)
         {
-            var clients = _mapper.Map<List<ToContactUsDTO>>(_appDbContext.tToContactUs).ToList();
-            if(sc.Search != null)
+            var clients = (from cl in _appDbContext.tClients
+                            join tc in _appDbContext.tToContactUs
+                            on cl.Id equals tc.ClientId
+                            where tc.IsDeleted == false
+                            select new ToContactUsDTO
+                            { 
+                                Id = cl.Id,
+                                FullName = cl.FullName,
+                                PhoneNumber = cl.PhoneNumber,
+                                Email = cl.Email,
+                                Description = tc.Description
+                            }).ToList();
+            if (sc.Search != null)
             {
                 var simpleSearch = sc.Search.ToLower();
 
@@ -59,7 +80,8 @@ namespace PatronatGroup.EntityFramework.Services
 
         public LawyersSR GetLawyers(LawyersSC sc)
         {
-            var lawyers = _mapper.Map<List<LawyersDTO>>(_appDbContext.tLawyers).ToList();
+            var req = _appDbContext.tLawyers.Where(x => !x.IsDeleted);
+            var lawyers = _mapper.Map<List<LawyersDTO>>(req).ToList();
             if (sc.Search != null)
             {
                 var simpleSearch = sc.Search.ToLower();
@@ -79,13 +101,29 @@ namespace PatronatGroup.EntityFramework.Services
 
         public void Submit(ToContactUsDTO toContactUs)
         {
-            _appDbContext.tToContactUs.Add(_mapper.Map<tToContactUs>(toContactUs));
+            var client = new tClients
+            {
+                Email = toContactUs.Email,
+                FullName = toContactUs.FullName,
+                PhoneNumber = toContactUs.PhoneNumber,
+            };
+            _appDbContext.tClients.Add(client);
+            _appDbContext.SaveChanges();
+
+            var toContactUsDb = new tToContactUs
+            {
+                ClientId = client.Id,
+                Description = toContactUs.Description,
+                CreatedOn = DateTime.Now
+            };
+            _appDbContext.tToContactUs.Add(toContactUsDb);
             _appDbContext.SaveChanges();
         }
 
         public void UpdateLawyer(LawyersDTO lawyerDTO)
         {
-            _appDbContext.Update(lawyerDTO);
+            var lawyer = _mapper.Map<tLawyers>(lawyerDTO);
+            _appDbContext.Update(lawyer);
             _appDbContext.SaveChanges();
         }
     }

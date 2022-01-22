@@ -11,6 +11,7 @@ namespace PatronatGroup.Interfaces.Facades
     {
         void CreateLawyer(LawyersDTO lawyerDTO);
         void DeleteLawyer(int lawyerId);
+        void DeleteToContactUsClient(int id);
         ToContactUsSR GetClients(ToContactUsSC sc);
         LawyersSR GetLawyers(LawyersSC sc);
 

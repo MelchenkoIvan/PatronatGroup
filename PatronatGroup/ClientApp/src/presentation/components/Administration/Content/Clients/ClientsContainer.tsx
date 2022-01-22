@@ -14,6 +14,8 @@ const mapStateToProps = (state: RootState) => {
 let mapDispatchToProps = (dispatch: any) => {
   return {
     onGetPage: (sc:Sc) => dispatch(actions.GetClients(sc)),
+    onSearch: (sc:Sc) => dispatch(actions.SearchClients(sc)),
+    onRowDelete: (id:number) => dispatch(actions.DeleteClient(id)),
   };
 };
 

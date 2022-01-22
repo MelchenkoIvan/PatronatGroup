@@ -15,6 +15,7 @@ const mapStateToProps = (state: RootState) => {
 let mapDispatchToProps = (dispatch: any) => {
   return {
     onGetPage: (sc:Sc) => dispatch(actionsHome.GetLawyers(sc)),
+    onRowDelete: (id:number) => dispatch(actionsAdmin.DeleteLawyer(id)),
   };
 };
 
