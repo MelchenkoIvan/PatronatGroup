@@ -40,6 +40,9 @@ export const translationsUa = {
     position:"Должность",
     actions:"Действия",
     thisEmployeeDeleted:"Этот сотрудник будет удален и у вас не будет возможности ее вернуть !",
+    cancel:"Отменить",
+    submit:"Сохранить",
+    surname:"Фамилия",
     //descriptions
     taxLawDescriptions:
     "Lorem ipsum dolor sit amet. " +

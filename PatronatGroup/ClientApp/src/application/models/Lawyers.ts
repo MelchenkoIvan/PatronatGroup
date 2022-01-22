@@ -5,6 +5,7 @@ export default interface Lawyers{
     Fullname:string,
     Description:string,
     Position:string,
+    Image:string,
 }
 export interface Lawyer{
     id: number,
@@ -14,4 +15,5 @@ export interface Lawyer{
     description:string,
     position:string,
     email:string,
+    image:string,
 }

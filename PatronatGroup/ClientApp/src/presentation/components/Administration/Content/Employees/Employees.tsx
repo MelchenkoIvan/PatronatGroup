@@ -6,6 +6,7 @@ import Sc from "../../../../../application/models/Sc";
 import AreYouSureModal from "../../../../../infrastructure/Common/components/modal/AreYouSureModal";
 import TablePaginationg from "../../../../../infrastructure/Common/components/TablePaginationg";
 import { labels } from "../../../../../infrastructure/Common/i18n/translationsServices";
+import EmployeesModalForm from "./EmployeesModalForm";
 
 interface SR {
   defaultRowsOnPage: number;
@@ -33,24 +34,36 @@ const Employees: FC<PropsType> = (props) => {
     onGetPage();
   }, [props.onGetPage]);
 
-  const [show, setShow] = useState<boolean>(false);
+  const [isShowDeleteModal, setShowDeleteModal] = useState<boolean>(false);
   const [rowId, setRowId] = useState<number | null>(null);
 
-  const showModal = () => {
-    setShow(true);
+  const showDeleteModal = () => {
+    setShowDeleteModal(true);
   };
-  const hideModal = () => {
-    setShow(false);
+  const hideDeleteModal = () => {
+    setShowDeleteModal(false);
   };
   const onRowDelete = () => {
     if (rowId != null) {
       console.log(rowId)
       props.onRowDelete(rowId!);
       onGetPage();
-      hideModal();
+      hideDeleteModal();
     }
   };
-  const onRowEdit = (item: Lawyer) => {};
+
+  const [isShowEmployessModalForm, setShowEmployessModalForm] = useState<boolean>(false);
+  const [lawyer, setLawyer] = useState<Lawyer>();
+  const showEmployessModalForm = () => {
+    setShowEmployessModalForm(true);
+  };
+  const hideEmployessModalForm = () => {
+    setShowEmployessModalForm(false);
+  };
+  
+  const onRowEditCreate = () => {
+    console.log(lawyer)
+  };
 
   return (
     <div>
@@ -74,7 +87,8 @@ const Employees: FC<PropsType> = (props) => {
                     size="large"
                     style={{ cursor: "pointer" }}
                     onClick={() => {
-                      onRowEdit(x);
+                      showEmployessModalForm();
+                      setLawyer(x);
                     }}
                   />
                   <Icon
@@ -82,7 +96,7 @@ const Employees: FC<PropsType> = (props) => {
                     size="large"
                     style={{ cursor: "pointer" }}
                     onClick={() => {
-                      showModal();
+                      showDeleteModal();
                       setRowId(x.id);
                     }}
                   />
@@ -118,10 +132,16 @@ const Employees: FC<PropsType> = (props) => {
           </Table.Footer>
         </Table>
       </Container>
+      <EmployeesModalForm
+        onSubmit={onRowEditCreate}
+        handleClose={hideEmployessModalForm}
+        show={isShowEmployessModalForm}
+        lawyer={lawyer!}
+      ></EmployeesModalForm>
       <AreYouSureModal
         onSubmit={onRowDelete}
-        handleClose={hideModal}
-        show={show}
+        handleClose={hideDeleteModal}
+        show={isShowDeleteModal}
         content={t(labels.thisEmployeeDeleted)}
       ></AreYouSureModal>
     </div>

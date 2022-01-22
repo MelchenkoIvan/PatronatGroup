@@ -40,6 +40,9 @@ export const labels = {
   position:"position",
   actions:"actions",
   thisEmployeeDeleted:"thisEmployeeDeleted",
+  cancel:"cancel",
+  submit:"submit",
+  surname:"surname",
 
   
   //validation

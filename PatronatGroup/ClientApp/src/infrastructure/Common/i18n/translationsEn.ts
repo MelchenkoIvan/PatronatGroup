@@ -40,6 +40,9 @@ export const translationsEn = {
     position:"Position",
     actions:"Actions",
     thisEmployeeDeleted:"This employee will be deleted and you will not be able to return him !",
+    cancel:"Cancel",
+    submit:"Submit",
+    surname:"Surname",
 
     //descriptions
     taxLawDescriptions:"Lorem ipsum dolor sit amet. " +
