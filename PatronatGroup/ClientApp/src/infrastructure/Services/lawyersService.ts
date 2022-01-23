@@ -1,5 +1,5 @@
 import * as connectionString from './connectionString';
-import Lawyers from '../../application/models/Lawyers';
+import { Lawyer } from '../../application/models/Lawyers';
 import ToContactUs from '../../application/models/ToContactUs';
 import notificationService from './notificationService';
 import Sc from '../../application/models/Sc';
@@ -7,7 +7,7 @@ import Sc from '../../application/models/Sc';
 export const lawyersService = {
     async GetLawyers(sc:Sc) {
         try {
-            let data = await connectionString.api.post<Lawyers>('lawyers/lawyers',sc)
+            let data = await connectionString.api.post<Lawyer>('lawyers/lawyers',sc)
                 .then(response => response.data);
             return data;
         }
@@ -15,7 +15,7 @@ export const lawyersService = {
             console.log(e);
         }
     },
-    async CreateLawyer(lawyer: Lawyers) {
+    async CreateLawyer(lawyer: Lawyer) {
         try {
             let data = await connectionString.api.post('lawyers', lawyer)
                 .then(response => response.data);
@@ -25,7 +25,7 @@ export const lawyersService = {
             console.log(e);
         }
     },
-    async UpdateLawyer(lawyer: Lawyers) {
+    async UpdateLawyer(lawyer: Lawyer) {
         try {
             let data = await connectionString.api.put('lawyers', lawyer)
                 .then(response => response.data);

@@ -43,6 +43,8 @@ export const labels = {
   cancel:"cancel",
   submit:"submit",
   surname:"surname",
+  addLawyer:"addLawyer",
+  updateLawyer:"updateLawyer",
 
   
   //validation

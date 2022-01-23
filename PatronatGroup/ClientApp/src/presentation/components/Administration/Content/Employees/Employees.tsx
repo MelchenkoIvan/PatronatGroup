@@ -1,6 +1,7 @@
 import { t } from "i18next";
 import React, { FC, useEffect, useState } from "react";
 import { Button, Container, Icon, Table } from "semantic-ui-react";
+import { string } from "yup/lib/locale";
 import { Lawyer } from "../../../../../application/models/Lawyers";
 import Sc from "../../../../../application/models/Sc";
 import AreYouSureModal from "../../../../../infrastructure/Common/components/modal/AreYouSureModal";
@@ -18,6 +19,8 @@ interface PropsType {
   lawyers: SR;
   onGetPage: (sc: Sc) => void;
   onRowDelete: (rowId: number) => void;
+  onRowEdit: (value: Lawyer) => void;
+  onRowCreate: (value: Lawyer) => void;
 }
 
 const Employees: FC<PropsType> = (props) => {
@@ -45,24 +48,21 @@ const Employees: FC<PropsType> = (props) => {
   };
   const onRowDelete = () => {
     if (rowId != null) {
-      console.log(rowId)
       props.onRowDelete(rowId!);
       onGetPage();
       hideDeleteModal();
     }
   };
 
-  const [isShowEmployessModalForm, setShowEmployessModalForm] = useState<boolean>(false);
+  const [isShowEmployessModalForm, setShowEmployessModalForm] =
+    useState<boolean>(false);
   const [lawyer, setLawyer] = useState<Lawyer>();
+  const [isCreate, setCreate] = useState<boolean>();
   const showEmployessModalForm = () => {
     setShowEmployessModalForm(true);
   };
   const hideEmployessModalForm = () => {
     setShowEmployessModalForm(false);
-  };
-  
-  const onRowEditCreate = () => {
-    console.log(lawyer)
   };
 
   return (
@@ -87,6 +87,7 @@ const Employees: FC<PropsType> = (props) => {
                     size="large"
                     style={{ cursor: "pointer" }}
                     onClick={() => {
+                      setCreate(false);
                       showEmployessModalForm();
                       setLawyer(x);
                     }}
@@ -105,6 +106,7 @@ const Employees: FC<PropsType> = (props) => {
                 <Table.Cell>{x.email}</Table.Cell>
                 <Table.Cell>{x.position}</Table.Cell>
                 <Table.Cell>{x.description}</Table.Cell>
+                {console.log(x)}
               </Table.Row>
             ))}
           </Table.Body>
@@ -113,13 +115,17 @@ const Employees: FC<PropsType> = (props) => {
               <Table.HeaderCell />
               <Table.HeaderCell colSpan="4">
                 <Button
+                  onClick={() => {
+                    setCreate(true);
+                    showEmployessModalForm();
+                  }}
                   floated="right"
                   icon
                   labelPosition="left"
                   primary
                   size="small"
                 >
-                  <Icon name="user" /> Add User
+                  <Icon name="user" /> {t(labels.addLawyer)}
                 </Button>
                 <TablePaginationg
                   onCnahge={props.onGetPage}
@@ -132,12 +138,31 @@ const Employees: FC<PropsType> = (props) => {
           </Table.Footer>
         </Table>
       </Container>
-      <EmployeesModalForm
-        onSubmit={onRowEditCreate}
-        handleClose={hideEmployessModalForm}
-        show={isShowEmployessModalForm}
-        lawyer={lawyer!}
-      ></EmployeesModalForm>
+      {isCreate ? (
+        <EmployeesModalForm
+          onSubmit={props.onRowCreate}
+          handleClose={hideEmployessModalForm}
+          show={isShowEmployessModalForm}
+          initialValues={{
+            id:0,
+            name: "",
+            surname: "",
+            description: "",
+            position: "",
+            email: "",
+            image: "",
+          }}
+          title={t(labels.addLawyer)}
+        ></EmployeesModalForm>
+      ) : (
+        <EmployeesModalForm
+          onSubmit={props.onRowEdit}
+          handleClose={hideEmployessModalForm}
+          show={isShowEmployessModalForm}
+          initialValues={{...lawyer!,image:""}}
+          title={t(labels.updateLawyer)}
+        ></EmployeesModalForm>
+      )}
       <AreYouSureModal
         onSubmit={onRowDelete}
         handleClose={hideDeleteModal}

@@ -4,10 +4,12 @@ import { Form, Label } from 'semantic-ui-react';
 
 
 interface Props{
-    placeholder:string;
+    id?:string;
+    placeholder?:string;
     name: string;
     type?:string;
     lable?: string;
+    onChange?:(e:React.ChangeEvent<HTMLInputElement>)=>void
 }
 
 const SemanyicUiInput = (props:Props) => {

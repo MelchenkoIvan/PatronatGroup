@@ -20,6 +20,10 @@ namespace PatronatGroup.Common.ModelsDTO
         public string Description { get; set; }
 
         public string Position { get; set; }
+
+        public string Email { get; set; }
+
+        public string Image { get; set; }
     }
     public class LawyersSR : SearchResult<LawyersDTO>
     {

@@ -44,9 +44,9 @@ const CommandBlok: FC<PropsType> = (props) => {
           <div key={x.id.toString()}>
             <CommandSkeleton
               isSlider
-              contactData="imelchenko61@gmail.con"
-              name={x.fullName}
-              icon={exImg}
+              contactData={x.email}
+              name={x.fullName!}
+              icon={x.image|| exImg }
               description={x.description}
             />
           </div>

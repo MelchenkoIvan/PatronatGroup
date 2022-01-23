@@ -43,7 +43,9 @@ export const translationsEn = {
     cancel:"Cancel",
     submit:"Submit",
     surname:"Surname",
-
+    addLawyer:"Add lawyer",
+    updateLawyer:"Update lawyer",
+    
     //descriptions
     taxLawDescriptions:"Lorem ipsum dolor sit amet. " +
     "consectetur adipiscing elit. " +

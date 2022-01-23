@@ -18,6 +18,8 @@ namespace PatronatGroup.EntityFramework.Models
 
         public string Position { get; set; }
 
+        public string Email { get; set; }
+
         public string Image { get; set; }
 
         public DateTime CreatedOn { get; set; }

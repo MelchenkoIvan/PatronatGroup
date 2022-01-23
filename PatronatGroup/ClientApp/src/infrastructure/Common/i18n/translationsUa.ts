@@ -43,6 +43,8 @@ export const translationsUa = {
     cancel:"Отменить",
     submit:"Сохранить",
     surname:"Фамилия",
+    addLawyer:"Добавить адвоката",
+    updateLawyer:"Обновить адвоката",
     //descriptions
     taxLawDescriptions:
     "Lorem ipsum dolor sit amet. " +
