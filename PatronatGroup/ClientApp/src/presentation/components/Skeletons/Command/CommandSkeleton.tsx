@@ -18,14 +18,20 @@ const CommandSkeleton: FC<Props> = (props) => {
   return (
     <>
       <div className={`commonForBloks forBloksBackground ${style.container}`}>
-        <div><img src={props.icon} alt={props.icon} className={style.img}></img></div>
+        <div className={style.containerImg}>
+          <img src={props.icon} alt={props.icon} className={style.img}></img>
+        </div>
         <div className={style.conten}>
-          <div className={style.title}>{props.name}</div>
-          <div className={style.subTitle}>{props.contactData}</div>
-          <div className={style.description}>{props.description}</div>
+          <div>
+            <div className={style.title}>{props.name}</div>
+            <div className={style.subTitle}>{props.contactData}</div>
+            <div className={style.description}>{props.description}</div>
+          </div>
           <div className={style.buttonAndSocial}>
-            {!props.isSlider && <Button content={t(labels.moreDetails)} onClick={() => {}} />}
-            <Social />
+            {!props.isSlider && (
+              <Button content={t(labels.moreDetails)} onClick={() => {}} />
+            )}
+            <Social isFlex={props.isSlider}/>
           </div>
         </div>
       </div>

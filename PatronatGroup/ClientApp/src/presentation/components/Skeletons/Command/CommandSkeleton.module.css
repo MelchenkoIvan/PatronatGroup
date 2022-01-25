@@ -24,7 +24,9 @@
 .conten {
   display: flex;
   flex-direction: column;
-  width: 49%;
+  width: 100%;
+  margin-left: 10px;
+  justify-content: space-between;
 }
 .description {
   font-family: Tenor Sans;
@@ -39,8 +41,16 @@
   justify-content: space-between;
   margin-top: 50px;
 }
+.containerImg{
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+}
 .img{
-  width: 80%;
+  width: 100%;
   display: flex;
   margin: 0 auto;
 }

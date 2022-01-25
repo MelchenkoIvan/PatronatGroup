@@ -7,7 +7,6 @@ import Footer from "./components/Footer/Footer";
 import AboutCompany from "./components/AboutCompany/AboutCompany";
 import Contacts from "./components/Contacts/Contacts";
 import Practices from "./components/Practices/Practices";
-import Command from "./components/Command/Command";
 import Home from "./components/HomePage/Home";
 import LoginFormContainer from "./components/Administration/LoginFormContainer";
 import { connect } from "react-redux";
@@ -28,6 +27,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../custom.css";
 import "react-toastify/dist/ReactToastify.css";
+import CommandContainer from "./components/Command/CommandContainer";
 
 
 
@@ -75,7 +75,7 @@ const App: FC<PropsType> = ({ admin, onGetPage}) => {
           <Route exact path="/aboutCompany" component={AboutCompany} />
           <Route exact path="/contacts" component={Contacts} />
           <Route exact path="/practices" component={Practices} />
-          <Route exact path="/command" component={Command} />
+          <Route exact path="/command" component={CommandContainer} />
           <Footer />
         </div>
       )}

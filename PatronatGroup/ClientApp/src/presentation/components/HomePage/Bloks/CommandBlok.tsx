@@ -34,7 +34,7 @@ const CommandBlok: FC<PropsType> = (props) => {
   const history = useHistory();
 
   useEffect(() => {
-    props.onGetPage({rowsOnPage:20,pageNumber:1} as Sc);
+    props.onGetPage({rowsOnPage:100,pageNumber:1} as Sc);
   },[props.onGetPage]);
 
   return (

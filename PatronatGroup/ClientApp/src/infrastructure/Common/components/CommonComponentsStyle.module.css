@@ -93,7 +93,7 @@
   margin-top: 15px;
   padding-left: 7px;
 }
-.textArea::placeholder{
+.textArea::placeholder {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -109,16 +109,19 @@
   border: 1px solid #ff3737;
 }
 .error::placeholder {
-  color:#ff3737;
+  color: #ff3737;
 }
 /* toMainButton */
 
-.toMainButton{
+.toMainButton {
   display: flex;
   justify-content: center;
 }
 /* social */
-.social{
+.socialFlex {
   display: flex;
+  margin-top: 5px;
+}
+.social {
   margin-top: 5px;
 }

@@ -59,8 +59,11 @@ export const translationsUa = {
 
     //validation
     nameRequired:"Имя обязательно!",
+    surnameRequired:"Требуется фамилия !",
+    positionRequired:"Должность обязательна !",
     emailRequired:"Электронная почта обязательна!",
     phoneRequired:"Номер телефона обязателен!",
+    imgRequired:"Изображение обязательно!",
     descriptionRequired:"Описание обязательно!",
     invalidEmail:"Неверный формат электронной почты",
     phoneIsNotCorrect:"Номер телефона неверен !",

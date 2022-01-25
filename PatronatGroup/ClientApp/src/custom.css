@@ -54,3 +54,7 @@ body{
   flex-direction: column;
   justify-content: center;
 }
+/* input[type='file']*/
+/* input[type='file'] {
+  opacity:1    
+} */

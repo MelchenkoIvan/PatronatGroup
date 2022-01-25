@@ -60,8 +60,11 @@ export const translationsEn = {
     
     //validation
     nameRequired:"Name is required !",
+    surnameRequired:"Surname is required !",
+    positionRequired:"Position is required !",
     emailRequired:"Email is required !",
     phoneRequired:"Phone number is required !",
+    imgRequired:"Image is required !",
     descriptionRequired:"Description is required !",
     invalidEmail:"Invalid email format ",
     phoneIsNotCorrect:"Phone number is not correct !",

@@ -49,8 +49,11 @@ export const labels = {
   
   //validation
   nameRequired:"nameRequired",
+  surnameRequired:"surnameRequired",
+  positionRequired:"positionRequired",
   emailRequired:"emailRequired",
   phoneRequired:"phoneRequired",
+  imgRequired:"imgRequired",
   descriptionRequired:"descriptionRequired",
   invalidEmail:"invalidEmail",
   phoneIsNotCorrect:"phoneIsNotCorrect",

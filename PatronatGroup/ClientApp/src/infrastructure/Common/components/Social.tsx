@@ -6,9 +6,15 @@ import facebook from "../../../assets/social/facebook.png";
 import instagramm from "../../../assets/social/instagramm.png";
 import telegramm from "../../../assets/social/telegramm.png";
 import watsapp from "../../../assets/social/watsapp.png";
-const Social:FC = () => {
+
+interface PropsType{
+    isFlex?: boolean;
+}
+
+const Social:FC<PropsType> = ({isFlex}) => {
+    const className = isFlex ? style.socialFlex : style.social
     return(
-        <div className={style.social}>
+        <div className={className}>
             <img className="socialIcon" src={facebook} alt="facebook" />
             <img className="socialIcon" src={instagramm} alt="instagramm" />
             <img className="socialIcon" src={telegramm} alt="telegramm" />
