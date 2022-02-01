@@ -45,8 +45,14 @@ export const labels = {
   surname:"surname",
   addLawyer:"addLawyer",
   updateLawyer:"updateLawyer",
-
-  
+  //descriptions
+  aboutCompanyDescriptions: "aboutCompanyDescriptions",
+  taxLawDescriptions: "taxLawDescriptions",
+  criminalLawDescriptions: "criminalLawDescriptions",
+  familyAndInheritanceLawDescriptions: "familyAndInheritanceLawDescriptions",
+  communalLawDescriptions: "communalLawDescriptions",
+  corporateLawDescriptions: "corporateLawDescriptions",
+  jurisprudenceDescriptions: "jurisprudenceDescriptions",
   //validation
   nameRequired:"nameRequired",
   surnameRequired:"surnameRequired",
@@ -59,6 +65,7 @@ export const labels = {
   phoneIsNotCorrect:"phoneIsNotCorrect",
   maxCharacters:"maxCharacters",
 };
-export const descriptions = {
-  taxLawDescriptions: "taxLawDescriptions" 
-};
+
+  
+
+

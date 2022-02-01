@@ -47,15 +47,58 @@ export const translationsEn = {
     updateLawyer:"Update lawyer",
     
     //descriptions
-    taxLawDescriptions:"Lorem ipsum dolor sit amet. " +
-    "consectetur adipiscing elit. " +
-    "In arcu cursus euismod quis viverra nibh." +
-    "Mattis ullamcorper velit sed ullamcorper morbi tincidunt." +
-    "Eu consequat ac felis donec." +
-    "Ac turpis egestas sed tempus urna et." +
-    "Ipsum a arcu cursus vitae congue mauris rhoncus." +
-    "In cursus turpis massa tincidunt dui ut ornare lectus sit." +
-    "Augue ut lectus arcu bibendum at varius vel pharetr",
+    aboutCompanyDescriptions: `Advocates union “Patronage Group” is a law firm, which provides highly qualified legal assistance and effective representation in courts throughout Ukraine.
+    In 2019, lead counsels of the Donetsk region decided to merge and create an advocates union “Patronage Group”, in order to strengthen and expand the practices, in particular, work with legal entities and tax litigation support. 
+    The experience of “Patronage Group” lawyers in jurisprudence, will undoubtedly help the firm to consolidate its leadership position and clients will receive value-added services.
+    Vitaliy Melchenko, the founder of “Patronage Group” consider: “The main goal and top priority of the firm is continuous improvement of quality and satisfying needs of clients. I believe that the long-term experience of our team, will become a significant advantage in practice of dispute resolution and will help to achieve our goals”.
+    `,
+    taxLawDescriptions: `Comprehensive legal support of tax audit.
+    Administrative and judicial appeal of decisions of tax administration.
+    Counselling according tax and fees application.
+    Tax expertise of contracts.
+    Tax audit
+    `,
+    criminalLawDescriptions: `Counselling of all matters of criminal liability.
+    Protection of client’s interests at all stages of criminal procedure.
+    Development of legal position and its justification.
+    Preparation of procedural documents.
+    Representation in courts of various instances
+    `,
+    familyAndInheritanceLawDescriptions: `Divorce, division of property.
+    Determining the participation of parents in the upbringing and maintenance of the child. 
+    Recognition of paternity/maternity, deprivation of parental rights.
+    Extrajudicial settlement of disputes between spouses.
+    Legal support of adoption and guardianship.
+    Inheritance, the drafting and executing of the will, contesting the will
+    `,
+    communalLawDescriptions: `Recognition of ownership to land or property.
+    Determination of shares in ownership.
+    Determination and establishment of the procedure for use of residential premises.
+    Division of land, house, apartment between owners.
+    Moving in and out of a dwelling.
+    Recognition of sale contracts and leases invalid. 
+    Disputes on utility bills.
+    Recovery of damage in case of property damage.
+    Legal support of housing self-government
+    `,
+    corporateLawDescriptions: `Legal support of business organization.
+    Development of corporate documents.
+    Preparation of treaties, bidding documents and bids.
+    Support for the negotiations and contracting.
+    Protection of interests of the business and its owners.
+    Interaction with supervisory and regulatory authorities.
+    Protection of the business reputation.
+    Legal support of business liquidation.
+    Settlement of relations between employers and trade unions.
+    Drawing up collective agreement. 
+    Protection the interests of employees and employers in labor relations
+    `,
+    jurisprudenceDescriptions: `Representation in any court.
+    Appeal against court decisions.
+    Alternative settlement of disputes.
+    Legal support of judicial decisions
+    `,
+
 
     
     //validation
