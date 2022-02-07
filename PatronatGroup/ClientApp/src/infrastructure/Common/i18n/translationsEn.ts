@@ -45,6 +45,7 @@ export const translationsEn = {
     surname:"Surname",
     addLawyer:"Add lawyer",
     updateLawyer:"Update lawyer",
+    admins:"Admins",
     
     //descriptions
     aboutCompanyDescriptions: `Advocates union “Patronage Group” is a law firm, which provides highly qualified legal assistance and effective representation in courts throughout Ukraine.

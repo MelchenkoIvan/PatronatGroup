@@ -19,18 +19,18 @@ namespace PatronatGroup.Facades
             _userSrv = userSrv;
         }
 
-        public Task<UserDTO> Login(LoginDTO loginDTO)
+        public async Task<UserDTO> Login(LoginDTO loginDTO)
         {
-            return _userSrv.Login(loginDTO);
+            return await _userSrv.Login(loginDTO);
         }
 
-        public Task<UserDTO> Register(LoginDTO loginDTO)
+        public async Task<UserDTO> Register(LoginDTO loginDTO)
         {
-            return _userSrv.Register(loginDTO);
+            return await _userSrv.Register(loginDTO);
         }
-        public Task<UserDTO> GetCurrentUser(ClaimsPrincipal User)
+        public async Task<UserDTO> GetCurrentUser(ClaimsPrincipal User)
         {
-            return _userSrv.GetCurrentUser(User);
+            return await _userSrv.GetCurrentUser(User);
         }
     }
 }

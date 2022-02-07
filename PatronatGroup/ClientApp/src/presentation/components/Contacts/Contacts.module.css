@@ -7,7 +7,7 @@
 .buttonAndSocila {
   display: flex;
   width: 80%;
-  justify-content: space-between;
+  justify-content: right;
   margin: 0 auto;
   padding-top: 10px;
 }

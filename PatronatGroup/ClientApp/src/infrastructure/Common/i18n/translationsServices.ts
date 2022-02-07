@@ -45,6 +45,7 @@ export const labels = {
   surname:"surname",
   addLawyer:"addLawyer",
   updateLawyer:"updateLawyer",
+  admins:"admins",
   //descriptions
   aboutCompanyDescriptions: "aboutCompanyDescriptions",
   taxLawDescriptions: "taxLawDescriptions",

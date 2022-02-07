@@ -15,6 +15,16 @@ export const lawyersService = {
             console.log(e);
         }
     },
+    async GetAdmins(sc:Sc) {
+        try {
+            let data = await connectionString.api.post<Lawyer>('lawyers/admins',sc)
+                .then(response => response.data);
+            return data;
+        }
+        catch (e) {
+            console.log(e);
+        }
+    },
     async CreateLawyer(lawyer: Lawyer) {
         try {
             let data = await connectionString.api.post('lawyers', lawyer)

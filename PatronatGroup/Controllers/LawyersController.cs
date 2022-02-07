@@ -65,6 +65,12 @@ namespace PatronatGroup.Controllers
             var clients = _lawyersFcd.GetClients(sc);
             return Ok(clients);
         }
+        [HttpPost("admins")]
+        public ActionResult<UserSR> GetAdmins(UserSC sc)
+        {
+            var clients = _lawyersFcd.GetAdmins(sc);
+            return Ok(clients);
+        }
 
     }
 }

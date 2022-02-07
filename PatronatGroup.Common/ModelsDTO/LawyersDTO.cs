@@ -19,6 +19,10 @@ namespace PatronatGroup.Common.ModelsDTO
 
         public string Description { get; set; }
 
+        public string DescriptionUA { get; set; }
+
+        public string DescriptionEN { get; set; }
+
         public string Position { get; set; }
 
         public string Email { get; set; }

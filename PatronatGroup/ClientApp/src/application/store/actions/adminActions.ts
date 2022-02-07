@@ -4,7 +4,7 @@ import { userService } from "../../../infrastructure/Services/userService";
 import { Lawyer } from "../../models/Lawyers";
 import Sc from "../../models/Sc";
 import { Login as LoginUser} from "../../models/User";
-import { LOAD_ADMIN, LOAD_CLIENTS, LOGOUT_ADMIN, SEARCH_CLIENTS } from "../reducers/userReducer";
+import { LOAD_ADMIN, LOAD_ADMINS, LOAD_CLIENTS, LOGOUT_ADMIN, SEARCH_CLIENTS } from "../reducers/userReducer";
 
 export const GetClients = (sc:Sc) => async (dispatch: any) => {
    await lawyersService.GetClients(sc).then(data => {
@@ -14,6 +14,14 @@ export const GetClients = (sc:Sc) => async (dispatch: any) => {
             })
     })
 }
+export const GetAdmins = (sc:Sc) => async (dispatch: any) => {
+    await lawyersService.GetAdmins(sc).then(data => {
+             dispatch({
+                 type: LOAD_ADMINS,
+                 data
+             })
+     })
+ }
 export const SearchClients = (sc:Sc) => async (dispatch: any) => {
     dispatch({
         type: SEARCH_CLIENTS,

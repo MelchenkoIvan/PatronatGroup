@@ -9,6 +9,7 @@ namespace PatronatGroup.EntityFramework.Models
 {
     public class tUsers : IdentityUser
     {
-
+        public bool IsDefaultAdmin { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

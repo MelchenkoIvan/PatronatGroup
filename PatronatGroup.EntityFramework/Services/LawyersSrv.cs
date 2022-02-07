@@ -45,6 +45,19 @@ namespace PatronatGroup.EntityFramework.Services
             _appDbContext.SaveChanges();
         }
 
+        public UserSR GetAdmins(UserSC sc)
+        {
+            var req = _appDbContext.tUsers.Where(x => !x.IsDeleted).Select(x => new UserDTO {Email = x.Email,IsDefaultAdmin = x.IsDefaultAdmin}).ToList();
+            return new UserSR()
+            {
+                CurrentPageNumber = sc.PageNumber,
+                TotalCount = req.Count(),
+                Items = req.Skip((sc.PageNumber - 1) * sc.RowsOnPage).Take(sc.RowsOnPage)
+              .ToList()
+            };
+
+        }
+
         public ToContactUsSR GetClients(ToContactUsSC sc)
         {
             var clients = (from cl in _appDbContext.tClients

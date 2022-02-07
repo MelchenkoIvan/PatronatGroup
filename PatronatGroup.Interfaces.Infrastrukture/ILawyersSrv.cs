@@ -14,6 +14,7 @@ namespace PatronatGroup.Interfaces.Infrastructure
         void DeleteToContactUsClient(int id);
         ToContactUsSR GetClients(ToContactUsSC sc);
         LawyersSR GetLawyers(LawyersSC sc);
+        UserSR GetAdmins(UserSC sc);
 
         void Submit(ToContactUsDTO toContactUs);
         void UpdateLawyer(LawyersDTO lawyerDTO);

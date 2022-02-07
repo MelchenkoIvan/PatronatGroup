@@ -14,7 +14,9 @@ namespace PatronatGroup.EntityFramework.Models
 
         public string Surname { get; set; }
 
-        public string Description { get; set; }
+        public string DescriptionUA { get; set; }
+
+        public string DescriptionEN { get; set; }
 
         public string Position { get; set; }
 

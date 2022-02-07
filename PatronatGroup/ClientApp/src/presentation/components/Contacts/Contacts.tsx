@@ -39,12 +39,6 @@ const Content = () => {
         ></iframe>
       </div>
       <div className={style.buttonAndSocila}>
-        <Button
-          content={t(labels.toContactUs)}
-          onClick={() => {
-            history.push({ pathname: `/command` });
-          }}
-        />
         <Social />
       </div>
     </div>

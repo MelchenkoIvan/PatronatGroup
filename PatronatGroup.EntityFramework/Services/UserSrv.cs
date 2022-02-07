@@ -72,6 +72,7 @@ namespace PatronatGroup.EntityFramework.Services
             return new UserDTO
             {
                 Email = user.Email,
+                IsDefaultAdmin = user.IsDefaultAdmin,
                 Token = _tokenService.CreateToken(user)
             };
         }

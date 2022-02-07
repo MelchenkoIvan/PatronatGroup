@@ -22,6 +22,7 @@ namespace PatronatGroup.EntityFramework.Seed
                 tUsers user = new tUsers();
                 user.UserName = "Ivan";
                 user.Email = "imelchenko61@gmail.com";
+                user.IsDefaultAdmin = true;
 
                 IdentityResult result = userManager.CreateAsync(user, "123zxc123").Result;
             }

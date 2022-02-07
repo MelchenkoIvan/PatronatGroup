@@ -11,7 +11,6 @@
   display: flex;
   margin: 0 auto;
   width: 90%;
-  justify-content: space-between;
 }
 .description {
   font-family: Tenor Sans;

@@ -4,5 +4,6 @@ export interface Login {
 }
 export interface User {
   email: string;
+  isDefaultAdmin:boolean;
   token: string;
 }

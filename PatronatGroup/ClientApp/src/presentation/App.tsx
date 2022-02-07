@@ -28,6 +28,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../custom.css";
 import "react-toastify/dist/ReactToastify.css";
 import CommandContainer from "./components/Command/CommandContainer";
+import AdminsContainer from "./components/Administration/Content/Admins/AdminsContainer";
 
 
 
@@ -64,7 +65,7 @@ const App: FC<PropsType> = ({ admin, onGetPage}) => {
               <NavBarContainer />
               <Route exact path="/admin/clients" component={ClientsContainer} />
               <Route exact path="/admin/employees" component={EmployeesContainer} />
-              <Route exact path="/admin/newAdmin" component={RegisterFormContainer} />
+              <Route exact path="/admin/admins" component={AdminsContainer} />
             </>
           )}
         </div>

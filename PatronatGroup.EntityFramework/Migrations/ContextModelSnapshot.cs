@@ -184,7 +184,10 @@ namespace PatronatGroup.EntityFramework.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("DescriptionEN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DescriptionUA")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -256,6 +259,12 @@ namespace PatronatGroup.EntityFramework.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDefaultAdmin")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<bool>("LockoutEnabled")
