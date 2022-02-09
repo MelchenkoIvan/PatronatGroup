@@ -11,7 +11,9 @@ export interface initialFormType {
   id: number;
   name: string;
   surname: string;
-  description: string;
+  description?:string;
+  descriptionUA?: string,
+  descriptionEN?: string,
   position: string;
   email: string;
   image: any;
@@ -39,7 +41,10 @@ const EmployeesModalForm: FC<Props> = ({
       .required(t(labels.emailRequired)),
     position: Yup.string().required(t(labels.positionRequired)),
     image: image ?  Yup.mixed().notRequired() : Yup.mixed().required(t(labels.imgRequired)),
-    description: Yup.string()
+    descriptionUA: Yup.string()
+      .required(t(labels.descriptionRequired))
+      .max(4000, t(labels.maxCharacters)),
+      descriptionEN: Yup.string()
       .required(t(labels.descriptionRequired))
       .max(4000, t(labels.maxCharacters)),
   });
@@ -72,8 +77,12 @@ const EmployeesModalForm: FC<Props> = ({
                   placeholder={t(labels.position)}
                 />
                 <SemanyicUiInput
-                  name="description"
-                  placeholder={t(labels.description)}
+                  name="descriptionUA"
+                  placeholder={t(labels.descriptionUA)}
+                />
+                <SemanyicUiInput
+                  name="descriptionEN"
+                  placeholder={t(labels.descriptionEN)}
                 />
                 <SemanyicUiInput
                   id="image"

@@ -46,7 +46,6 @@ export const lawyersService = {
         }
     },
     async DeleteLawyer(lawyerId: number) {
-        console.log(lawyerId)
         try {
             let data = await connectionString.api.delete(`lawyers/${lawyerId}`)
                 .then(response => response);

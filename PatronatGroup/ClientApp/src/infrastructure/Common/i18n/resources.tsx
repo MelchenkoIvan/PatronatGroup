@@ -29,6 +29,7 @@ const LenguagesButtons: FC = () => {
         onClick={(e: any) => {
           setCookie("lang",e.target.value,30);
           i18n.changeLanguage(e.target.value);
+          window.location.reload();
         }}
       >
         EN
@@ -39,6 +40,7 @@ const LenguagesButtons: FC = () => {
         onClick={(e: any) => {
           setCookie("lang",e.target.value,30);
           i18n.changeLanguage(e.target.value);
+          window.location.reload();
         }}
       >
         UA
@@ -47,3 +49,7 @@ const LenguagesButtons: FC = () => {
   );
 };
 export default LenguagesButtons;
+
+export interface TranslateInterface{
+  translate: (label: string) => string;
+}

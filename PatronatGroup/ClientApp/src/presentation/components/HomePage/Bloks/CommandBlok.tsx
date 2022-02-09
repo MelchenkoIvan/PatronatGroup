@@ -47,7 +47,7 @@ const CommandBlok: FC<PropsType> = (props) => {
               contactData={x.email}
               name={x.fullName!}
               icon={x.image|| exImg }
-              description={x.description}
+              description={x.description!}
             />
           </div>
         ))}

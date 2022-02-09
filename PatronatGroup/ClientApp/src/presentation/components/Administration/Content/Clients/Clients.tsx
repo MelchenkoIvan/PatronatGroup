@@ -1,5 +1,5 @@
 import { t } from "i18next";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import { Button, Checkbox, Container, Icon, Table } from "semantic-ui-react";
 import Client from "../../../../../application/models/Client";
 import Sc from "../../../../../application/models/Sc";
@@ -22,11 +22,12 @@ interface PropsType {
   clients: SR;
   onGetPage: (sc: Sc) => void;
   onSearch: (sc: Sc) => void;
-  onRowDelete: (rowId: number) => void;
+  onRowDelete: (rowId: number) => Promise<void>;
 }
 
 const Clients: FC<PropsType> = (props) => {
   const onGetPage = () => {
+    console.log("sds")
     props.onGetPage({
       rowsOnPage: props.clients.defaultRowsOnPage,
       pageNumber:
@@ -41,6 +42,7 @@ const Clients: FC<PropsType> = (props) => {
   };
   useEffect(() => {
     onGetPage();
+    console.log(props.clients.items)
   }, [props.onGetPage]);
 
   const onSearch = (value: string) => {
@@ -60,11 +62,10 @@ const Clients: FC<PropsType> = (props) => {
   const hideModal = () => {
     setShow(false);
   };
-  const onRowDelete = () => {
+  const onRowDelete = async () => {
     if(rowId != null){
-      props.onRowDelete(rowId!);
+      await props.onRowDelete(rowId!).then(onGetPage); 
       hideModal();
-      onGetPage();
     }
   };
   return (

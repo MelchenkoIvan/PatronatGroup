@@ -18,9 +18,9 @@ interface SR {
 interface PropsType {
   lawyers: SR;
   onGetPage: (sc: Sc) => void;
-  onRowDelete: (rowId: number) => void;
-  onRowEdit: (value: Lawyer) => void;
-  onRowCreate: (value: Lawyer) => void;
+  onRowDelete: (rowId: number) => Promise<void>;
+  onRowEdit: (value: Lawyer) => Promise<void>;
+  onRowCreate: (value: Lawyer) => Promise<void>;
 }
 
 const Employees: FC<PropsType> = (props) => {
@@ -46,10 +46,9 @@ const Employees: FC<PropsType> = (props) => {
   const hideDeleteModal = () => {
     setShowDeleteModal(false);
   };
-  const onRowDelete = () => {
+  const onRowDelete = async () => {
     if (rowId != null) {
-      props.onRowDelete(rowId!);
-      onGetPage();
+     await props.onRowDelete(rowId!).then(onGetPage);
       hideDeleteModal();
     }
   };
@@ -64,7 +63,14 @@ const Employees: FC<PropsType> = (props) => {
   const hideEmployessModalForm = () => {
     setShowEmployessModalForm(false);
   };
-
+  const onRowEdit = async (value:Lawyer) => {
+    await props.onRowEdit(value).then(onGetPage);
+    hideEmployessModalForm();
+  }
+  const onRowCreate = async (value:Lawyer) => {
+    await props.onRowCreate(value).then(onGetPage);
+    hideEmployessModalForm()
+  }
   return (
     <div>
       <Container style={{ marginTop: "2%" }}>
@@ -106,7 +112,6 @@ const Employees: FC<PropsType> = (props) => {
                 <Table.Cell>{x.email}</Table.Cell>
                 <Table.Cell>{x.position}</Table.Cell>
                 <Table.Cell>{x.description}</Table.Cell>
-                {console.log(x)}
               </Table.Row>
             ))}
           </Table.Body>
@@ -140,14 +145,15 @@ const Employees: FC<PropsType> = (props) => {
       </Container>
       {isCreate ? (
         <EmployeesModalForm
-          onSubmit={props.onRowCreate}
+          onSubmit={onRowCreate}
           handleClose={hideEmployessModalForm}
           show={isShowEmployessModalForm}
           initialValues={{
             id:0,
             name: "",
             surname: "",
-            description: "",
+            descriptionUA: "",
+            descriptionEN: "",
             position: "",
             email: "",
             image: "",
@@ -156,7 +162,7 @@ const Employees: FC<PropsType> = (props) => {
         ></EmployeesModalForm>
       ) : (
         <EmployeesModalForm
-          onSubmit={props.onRowEdit}
+          onSubmit={onRowEdit}
           handleClose={hideEmployessModalForm}
           show={isShowEmployessModalForm}
           initialValues={{...lawyer!,image:""}}

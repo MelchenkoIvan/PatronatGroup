@@ -22,15 +22,12 @@ const Content = () => {
   return (
     <div className={style.container}>
       <div className={style.description}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. In arcu cursus
-        euismod quis viverra nibh. Mattis ullamcorper velit sed ullamcorper
-        morbi
+        {t(labels.location)}
       </div>
       <div className={style.content}>
         <div className={style.qrCode}>
-          <div className={style.qrCodeTitle}>Lorem ipsum</div>
-          <div className={style.qrCodeDescription}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div className={style.qrCodeTitle}>{t(labels.qrCode)}</div>
+          <div className={style.qrCodeDescription}> {t(labels.qrCodeDescription)}</div>
           <img className={style.qrCodeImg} src={qrCode} alt="QR"/>
         </div>
         <iframe className={style.map}

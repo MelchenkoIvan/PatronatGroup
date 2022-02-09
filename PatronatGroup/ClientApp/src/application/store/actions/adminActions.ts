@@ -76,7 +76,6 @@ export const GetCurrentUser = () => async (dispatch: any) => {
     })
 }
 export const CreateLawyer = (value:Lawyer) => async (dispatch: any) => {
-
     value.image = await getBase64(value.image).then((req) => req);
     await lawyersService.CreateLawyer(value);
 }

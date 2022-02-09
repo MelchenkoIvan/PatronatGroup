@@ -49,7 +49,7 @@ const ContactModal: FC<Props> = ({ handleClose, show, onSubmit}) => {
             validationSchema={validationSchema}
             enableReinitialize
             initialValues={{fullName: "",email:"",phoneNumber:"",description:""} as ToContactUs}
-            onSubmit={(values:ToContactUs) => onSubmit(values)}
+            onSubmit={(values:ToContactUs) => {onSubmit(values);handleClose()}}
           >
             {({ handleSubmit, isValid, isSubmitting, dirty }) => (
               <Form onSubmit={handleSubmit}>

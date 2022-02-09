@@ -8,13 +8,15 @@ import CommandSkeleton from "../Skeletons/Command/CommandSkeleton";
 import exImg from "../../../assets/exampleImg.png";
 import { Lawyer } from "../../../application/models/Lawyers";
 import Sc from "../../../application/models/Sc";
+import TranslateHoc from "../../../infrastructure/Common/hoc/TranslateHoc";
+import { TranslateInterface } from "../../../infrastructure/Common/i18n/resources";
 
 interface SR {
   pageNumber: number;
   rowsOnPage: number;
   items: Array<Lawyer>;
 }
-interface PropsType {
+interface PropsType extends TranslateInterface  {
   onGetPage: (sc: Sc) => void;
   command: SR;
 }
@@ -24,7 +26,7 @@ const Command: FC<PropsType> = (props) => {
   }, [props.onGetPage]);
   return (
     <div>
-      <Blok title={t(labels.command)} isBacgroundLight />
+      <Blok title={props.translate(labels.command)} isBacgroundLight />
       {props.command &&
         props.command.items.map((x) => (
           <div key={x.id}>
@@ -32,7 +34,7 @@ const Command: FC<PropsType> = (props) => {
               contactData={x.email}
               name={x.fullName!}
               icon={x.image || exImg}
-              description={x.description}
+              description={x.description!}
             />
            
           </div>
@@ -41,4 +43,4 @@ const Command: FC<PropsType> = (props) => {
     </div>
   );
 };
-export default Command;
+export default TranslateHoc(Command);

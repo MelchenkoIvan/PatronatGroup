@@ -16,15 +16,16 @@ const PracticesBlok: FC = () => {
   return (
     <div className={style.benefitsContainer}>
         <div className={style.firstRowBenefits}>
-            <Square icon={taxIcon} title={t(labels.taxLaw)} content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In arcu cursus euismod quis viverra nibh. "/>
-            <Square icon={crimIcon} title={t(labels.criminalLaw)} content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In arcu cursus euismod quis viverra nibh. "/>
-            <Square icon={courtIcon} title={t(labels.arbitragePractice)} content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In arcu cursus euismod quis viverra nibh. "/>
-            <Square icon={taxIcon} title={t(labels.communalLaw)} content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In arcu cursus euismod quis viverra nibh. "/>
+            <Square icon={taxIcon} title={t(labels.taxLaw)} content={t(labels.taxLawDescriptions)}/>
+            <Square icon={crimIcon} title={t(labels.criminalLaw)} content={t(labels.criminalLawDescriptions)}/>
+            <Square icon={courtIcon} title={t(labels.arbitragePractice)} content={t(labels.jurisprudenceDescriptions)}/>
+            
         </div>
         <div className={style.secondRowBenefits}>
-            <Square icon={taxIcon} title={t(labels.corporateRight)} content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In arcu cursus euismod quis viverra nibh. "/>
-            <Square icon={inherIcon} title={t(labels.familyInheritanceLaw)} content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In arcu cursus euismod quis viverra nibh. "/>
-            <Square icon={raidIcon} title={t(labels.antiRaiderServices)} content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In arcu cursus euismod quis viverra nibh. "/>
+            <Square icon={taxIcon} title={t(labels.communalLaw)} content={t(labels.communalLawDescriptions)}/>
+            <Square icon={taxIcon} title={t(labels.corporateRight)} content={t(labels.corporateLawDescriptions)}/>
+            <Square icon={inherIcon} title={t(labels.familyInheritanceLaw)} content={t(labels.familyAndInheritanceLawDescriptions)}/>
+            {/* <Square icon={raidIcon} title={t(labels.antiRaiderServices)} content={t(labels.anti)}/> */}
         </div>
     </div>
   );
