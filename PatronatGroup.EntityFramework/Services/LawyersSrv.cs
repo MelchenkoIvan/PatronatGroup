@@ -30,6 +30,12 @@ namespace PatronatGroup.EntityFramework.Services
             _appDbContext.SaveChanges();
         }
 
+        public void DeleteAdmin(string login)
+        {
+            _appDbContext.tUsers.FirstOrDefault(x => x.Email == login).IsDeleted = true;
+            _appDbContext.SaveChanges();
+        }
+
         public void DeleteLawyer(int lawyerId)
         {
             var lawyer = _appDbContext.tLawyers.FirstOrDefault(x => x.Id == lawyerId);
@@ -95,6 +101,8 @@ namespace PatronatGroup.EntityFramework.Services
         {
             var req = _appDbContext.tLawyers.Where(x => !x.IsDeleted);
             var lawyers = _mapper.Map<List<LawyersDTO>>(req).ToList();
+            lawyers.ForEach(x => x.SetLang(sc.Lang));
+            
             if (sc.Search != null)
             {
                 var simpleSearch = sc.Search.ToLower();

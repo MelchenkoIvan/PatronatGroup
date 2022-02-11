@@ -17,8 +17,8 @@ interface SR {
 interface PropsType {
   admins: SR;
   onGetPage: (sc: Sc) => void;
-  onRowDelete: (login: string) => void;
-  register: (value: Login) => void;
+  onRowDelete: (login: string) => Promise<void>;
+  register: (value: Login) => Promise<void>;
 }
 
 const Admins: FC<PropsType> = (props) => {
@@ -36,6 +36,7 @@ const Admins: FC<PropsType> = (props) => {
   }, [props.onGetPage]);
 
   const [isShowModal, setShowModal] = useState<boolean>(false);
+  const [login, setLogin] = useState<string>();
  
 
   const showModal = () => {
@@ -44,10 +45,9 @@ const Admins: FC<PropsType> = (props) => {
   const hideModal = () => {
     setShowModal(false);
   };
-  const onRowDelete = (login: string) => {
+  const onRowDelete = () => {
     if (login != null) {
-      props.onRowDelete(login!);
-      onGetPage();
+      props.onRowDelete(login!).then(onGetPage);
       hideModal();
     }
   };
@@ -60,6 +60,10 @@ const Admins: FC<PropsType> = (props) => {
   const hideAddModalForm = () => {
     addModalForm(false);
   };
+  const registerAdmin = async (value:Login) => {
+    await props.register(value).then(onGetPage);
+    hideAddModalForm();
+  }
 
   return (
     <div>
@@ -79,7 +83,10 @@ const Admins: FC<PropsType> = (props) => {
                     name="delete"
                     size="large"
                     style={{ cursor: "pointer" }}
-                    onClick={showModal}
+                    onClick={() => {
+                      showModal();
+                      setLogin(x.email);
+                    }}
                   />
                 </Table.Cell>
                 <Table.Cell>{x.email}</Table.Cell>
@@ -115,7 +122,7 @@ const Admins: FC<PropsType> = (props) => {
       </Container>
 
       <AdminsModalForm
-        onSubmit={props.register}
+        onSubmit={registerAdmin}
         handleClose={hideAddModalForm}
         show={isAddModalForm}
         title={t(labels.registerNewAdmin)}

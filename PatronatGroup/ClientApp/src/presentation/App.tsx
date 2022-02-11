@@ -65,7 +65,7 @@ const App: FC<PropsType> = ({ admin, onGetPage}) => {
               <NavBarContainer />
               <Route exact path="/admin/clients" component={ClientsContainer} />
               <Route exact path="/admin/employees" component={EmployeesContainer} />
-              <Route exact path="/admin/admins" component={AdminsContainer} />
+              {admin.isDefaultAdmin && <Route exact path="/admin/admins" component={AdminsContainer} />}
             </>
           )}
         </div>

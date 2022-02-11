@@ -165,7 +165,7 @@ const Employees: FC<PropsType> = (props) => {
           onSubmit={onRowEdit}
           handleClose={hideEmployessModalForm}
           show={isShowEmployessModalForm}
-          initialValues={{...lawyer!,image:""}}
+          initialValues={lawyer!}
           title={t(labels.updateLawyer)}
         ></EmployeesModalForm>
       )}

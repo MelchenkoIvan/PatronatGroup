@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PatronatGroup.Common.ModelsDTO;
 using PatronatGroup.Interfaces.Facades;
@@ -20,7 +21,7 @@ namespace PatronatGroup.Controllers
         }
         [AllowAnonymous]
         [HttpPost("lawyers")]
-        public ActionResult<LawyersSR> GetLawyers([FromBody]LawyersSC sc)
+        public ActionResult<LawyersSR> GetLawyers([FromBody] LawyersSC sc)
         {
             var lawyers = _lawyersFcd.GetLawyers(sc);
             return Ok(lawyers);
@@ -65,11 +66,18 @@ namespace PatronatGroup.Controllers
             var clients = _lawyersFcd.GetClients(sc);
             return Ok(clients);
         }
+        public string CookieValue { get; set; }
         [HttpPost("admins")]
         public ActionResult<UserSR> GetAdmins(UserSC sc)
         {
             var clients = _lawyersFcd.GetAdmins(sc);
             return Ok(clients);
+        }
+        [HttpDelete("admin/{login}")]
+        public ActionResult DeleteAdmin(string login)
+        {
+            _lawyersFcd.DeleteAdmin(login);
+            return Ok();
         }
 
     }

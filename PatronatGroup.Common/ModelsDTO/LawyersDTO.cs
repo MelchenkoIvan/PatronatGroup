@@ -1,12 +1,15 @@
 ﻿using PatronatGroup.Common.Core;
+using PatronatGroup.Common.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace PatronatGroup.Common.ModelsDTO
 {
+    
     public class LawyersDTO
     {
         public int Id { get; set; }
@@ -28,13 +31,22 @@ namespace PatronatGroup.Common.ModelsDTO
         public string Email { get; set; }
 
         public string Image { get; set; }
+
+
+        public void SetLang(string lang)
+        {
+           Description = lang == Languages.En.ToString().ToLower() ? DescriptionUA : DescriptionEN;
+        }
+
     }
     public class LawyersSR : SearchResult<LawyersDTO>
     {
+
     }
 
     public class LawyersSC : SearchCriteria
     {
         public string Search { get; set; }
+        public string Lang { get; set; }
     }
 }

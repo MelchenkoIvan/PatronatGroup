@@ -56,6 +56,9 @@ export const labels = {
   qrCode:"qrCode",
   qrCodeDescription:"qrCodeDescription",
   location:"location",
+  uploadImg:"uploadImg",
+  formatNotAllowed:"formatNotAllowed",
+
   //admins:"admins",
   //descriptions
   aboutCompanyDescriptions: "aboutCompanyDescriptions",

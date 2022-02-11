@@ -22,6 +22,11 @@ namespace PatronatGroup.Facades
             _lawyersSrv.CreateLawyer(lawyerDTO);
         }
 
+        public void DeleteAdmin(string login)
+        {
+            _lawyersSrv.DeleteAdmin(login);
+        }
+
         public void DeleteLawyer(int lawyerId)
         {
             _lawyersSrv.DeleteLawyer(lawyerId);

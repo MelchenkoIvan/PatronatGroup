@@ -14,7 +14,6 @@ const mapStateToProps = (state:RootState) => {
 let mapDispatchToProps = (dispatch:any) =>{
     return{
         Logout: () => dispatch(actions.Logout()),
-        //onGetPage: () => dispatch(actions.GetClients())
     }
 };
 

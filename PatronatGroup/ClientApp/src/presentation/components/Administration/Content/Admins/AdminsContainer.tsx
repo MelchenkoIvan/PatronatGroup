@@ -17,8 +17,8 @@ const mapStateToProps = (state: RootState) => {
 let mapDispatchToProps = (dispatch: any) => {
   return {
     onGetPage: (sc:Sc) => dispatch(actionsAdmin.GetAdmins(sc)),
-    register: (user:Login) => dispatch(actionsAdmin.Register(user))
-   // onRowDelete: (login: string) => dispatch(actionsAdmin.DeleteLawyer(login)),
+    register: (user:Login) => dispatch(actionsAdmin.Register(user)),
+    onRowDelete: (login: string) => dispatch(actionsAdmin.DeleteAdmin(login)),
   };
 };
 

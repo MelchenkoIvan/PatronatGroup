@@ -3,11 +3,12 @@ import { Lawyer } from '../../application/models/Lawyers';
 import ToContactUs from '../../application/models/ToContactUs';
 import notificationService from './notificationService';
 import Sc from '../../application/models/Sc';
+import i18next from 'i18next';
 
 export const lawyersService = {
     async GetLawyers(sc:Sc) {
         try {
-            let data = await connectionString.api.post<Lawyer>('lawyers/lawyers',sc)
+            let data = await connectionString.api.post<Lawyer>('lawyers/lawyers',{...sc, lang: i18next.language})
                 .then(response => response.data);
             return data;
         }
@@ -48,6 +49,19 @@ export const lawyersService = {
     async DeleteLawyer(lawyerId: number) {
         try {
             let data = await connectionString.api.delete(`lawyers/${lawyerId}`)
+                .then(response => response);
+                if(data.status == 200){
+                    notificationService.Successful();
+                }
+            return data;
+        }
+        catch (e) {
+            console.log(e);
+        }
+    },
+    async DeleteAdmin(login: string) {
+        try {
+            let data = await connectionString.api.delete(`lawyers/admin/${login}`)
                 .then(response => response);
                 if(data.status == 200){
                     notificationService.Successful();

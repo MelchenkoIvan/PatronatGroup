@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
@@ -39,7 +40,12 @@ namespace PatronatGroup
                                  .Build();
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
-            
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // prevent access from javascript 
+                options.HttpOnly = HttpOnlyPolicy.Always;
+            });
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -72,6 +78,7 @@ namespace PatronatGroup
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+            app.UseCookiePolicy();
 
             app.UseRouting();
 

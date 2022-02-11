@@ -39,7 +39,10 @@ export const SearchClients = (sc:Sc) => async (dispatch: any) => {
 }
 export const DeleteClient = (id:number) => async (dispatch: any) => {
     await lawyersService.DeleteClient(id);
- }
+}
+export const DeleteAdmin = (login:string) => async (dispatch: any) => {
+    await lawyersService.DeleteAdmin(login);
+}
 export const DeleteLawyer = (id:number) => async (dispatch: any) => {
     await lawyersService.DeleteLawyer(id);
 }
@@ -80,7 +83,8 @@ export const CreateLawyer = (value:Lawyer) => async (dispatch: any) => {
     await lawyersService.CreateLawyer(value);
 }
 export const UpdateLawyer = (value:Lawyer) => async (dispatch: any) => {
-    value.image = await getBase64(value.image).then((req) => req);
+    if(typeof value.image !== 'string')value.image = await getBase64(value.image).then((req) => req);
+    
     await lawyersService.UpdateLawyer(value);
 }
 

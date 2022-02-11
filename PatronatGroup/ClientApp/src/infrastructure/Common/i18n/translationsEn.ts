@@ -56,8 +56,10 @@ export const translationsEn = {
   professionalism: "Professionalism",
   experience: "Experience",
   qrCode:"QR-Code",
-  qrCodeDescription:"qrCodeDescription",
-  location:"location",
+  qrCodeDescription:"Scan the qr code to download company contacts to your device.",
+  location:"Our office is located at st.  Druzhby 9, Kramatorsk... Before visiting the company, please contact and arrange a meeting on the specified contacts.  Working hours of the company: Mon-Fri from 08:00 – 16:00.",
+  uploadImg:"Upload Image",
+  
 
   //descriptions
   aboutCompanyDescriptions: `Advocates union “Patronage Group” is a law firm, which provides highly qualified legal assistance and effective representation in courts throughout Ukraine.
@@ -119,14 +121,15 @@ export const translationsEn = {
     commandDescription:`Our team consists of specialists from various branches of law, most of whom are employees of state bodies and local governments in the past. Thanks to this, we know the “system” from the inside and professionally, efficiently and quickly perform the tasks of our clients.`,
 
   //validation
-  nameRequired: "Name is required !",
-  surnameRequired: "Surname is required !",
-  positionRequired: "Position is required !",
-  emailRequired: "Email is required !",
-  phoneRequired: "Phone number is required !",
-  imgRequired: "Image is required !",
-  descriptionRequired: "Description is required !",
-  invalidEmail: "Invalid email format ",
-  phoneIsNotCorrect: "Phone number is not correct !",
-  maxCharacters: "Max 240 characters !",
+  nameRequired: "Name is required!",
+  surnameRequired: "Surname is required!",
+  positionRequired: "Position is required!",
+  emailRequired: "Email is required!",
+  phoneRequired: "Phone number is required!",
+  imgRequired: "Image is required!",
+  descriptionRequired: "Description is required!",
+  invalidEmail: "Invalid email format!",
+  phoneIsNotCorrect: "Phone number is not correct!",
+  maxCharacters: "Max 240 characters!",
+  formatNotAllowed:"Format not allowed!",
 };

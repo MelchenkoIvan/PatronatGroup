@@ -33,7 +33,7 @@ const NavBar:FC<PropsTypes> = ({admin,Logout}) => {
           />
           <Dropdown pointing="top left" text={admin.email}>
             <Dropdown.Menu>
-              <Dropdown.Item as={NavLink} to="/admin/admins"text={t(labels.admins)} icon="add user" />
+              {admin.isDefaultAdmin && <Dropdown.Item as={NavLink} to="/admin/admins"text={t(labels.admins)} icon="add user" />}
               <Dropdown.Item onClick={Logout} text={t(labels.logout)} icon="power" />
             </Dropdown.Menu>
           </Dropdown>

@@ -27,7 +27,6 @@ interface PropsType {
 
 const Clients: FC<PropsType> = (props) => {
   const onGetPage = () => {
-    console.log("sds")
     props.onGetPage({
       rowsOnPage: props.clients.defaultRowsOnPage,
       pageNumber:
@@ -42,7 +41,6 @@ const Clients: FC<PropsType> = (props) => {
   };
   useEffect(() => {
     onGetPage();
-    console.log(props.clients.items)
   }, [props.onGetPage]);
 
   const onSearch = (value: string) => {

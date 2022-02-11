@@ -21,10 +21,12 @@ const Thumb: FC<PropsType> = (props) => {
     reader.readAsDataURL(props.file);
   };
   useEffect(() => {
-    setState({
-      loading: true,
-      thumb: readFile(),
-    });
+    if(typeof props.file !== 'string'){
+      setState({
+        loading: true,
+        thumb: readFile(),
+      });
+    }
   }, [props.file]);
   if (!props.file) {
     return null;
@@ -35,7 +37,7 @@ const Thumb: FC<PropsType> = (props) => {
   }
   return (
     <img
-      src={state.thumb}
+      src={state.thumb || props.file}
       alt={props.file.name}
       className="img-thumbnail mt-2"
       height={200}
