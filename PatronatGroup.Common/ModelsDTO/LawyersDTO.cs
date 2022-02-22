@@ -35,7 +35,7 @@ namespace PatronatGroup.Common.ModelsDTO
 
         public void SetLang(string lang)
         {
-           Description = lang == Languages.En.ToString().ToLower() ? DescriptionUA : DescriptionEN;
+           Description = lang == Languages.En.ToString().ToLower() ? DescriptionEN : DescriptionUA;
         }
 
     }

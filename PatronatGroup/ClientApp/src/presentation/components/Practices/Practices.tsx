@@ -1,4 +1,3 @@
-import { t } from "i18next";
 import React, { FC } from "react";
 import ToMainButton from "../../../infrastructure/Common/components/ToMainButton";
 import { labels } from "../../../infrastructure/Common/i18n/translationsServices";
@@ -12,40 +11,41 @@ import arbitragePrac from "../../../assets/practices/sections/arbitragePrac.jpeg
 import communalLaw from "../../../assets/practices/sections/communalLaw.jpeg"
 import corporateLaw from "../../../assets/practices/sections/corporateLaw.jpeg"
 import familyLaw from "../../../assets/practices/sections/familyLaw.jpeg"
-import antiRaiderServices from "../../../assets/practices/sections/antiRaiderServices.jpeg"
+import TranslateHoc from "../../../infrastructure/Common/hoc/TranslateHoc";
+import { TranslateInterface } from "../../../infrastructure/Common/i18n/resources";
 
-const Practices: FC = () => {
+const Practices: FC<TranslateInterface> = ({translate}) => {
   return (
     <div>
-      <Blok title={t(labels.practices)} isBacgroundLight/>
+      <Blok title={translate(labels.practices)} isBacgroundLight/>
       <PracticesSkeleton
-        title={t(labels.taxLaw)}
-        description={t(labels.taxLawDescriptions)}
+        title={translate(labels.taxLaw)}
+        description={translate(labels.taxLawDescriptions)}
         icon={taxLaw}
       />
       <PracticesSkeleton
-        title={t(labels.criminalLaw)}
-        description={t(labels.criminalLawDescriptions)}
+        title={translate(labels.criminalLaw)}
+        description={translate(labels.criminalLawDescriptions)}
         icon={criminalLaw3}
       />
       <PracticesSkeleton
-        title={t(labels.arbitragePractice)}
-        description={t(labels.jurisprudenceDescriptions)}
+        title={translate(labels.arbitragePractice)}
+        description={translate(labels.jurisprudenceDescriptions)}
         icon={arbitragePrac}
       />
       <PracticesSkeleton
-        title={t(labels.communalLaw)}
-        description={t(labels.communalLawDescriptions)}
+        title={translate(labels.communalLaw)}
+        description={translate(labels.communalLawDescriptions)}
         icon={communalLaw}
       />
       <PracticesSkeleton
-        title={t(labels.corporateRight)}
-        description={t(labels.corporateLawDescriptions)}
+        title={translate(labels.corporateRight)}
+        description={translate(labels.corporateLawDescriptions)}
         icon={corporateLaw}
       />
       <PracticesSkeleton
-        title={t(labels.familyInheritanceLaw)}
-        description={t(labels.familyAndInheritanceLawDescriptions)}
+        title={translate(labels.familyInheritanceLaw)}
+        description={translate(labels.familyAndInheritanceLawDescriptions)}
         icon={familyLaw}
       />
       {/* <PracticesSkeleton
@@ -57,4 +57,4 @@ const Practices: FC = () => {
     </div>
   );
 };
-export default Practices;
+export default TranslateHoc(Practices);

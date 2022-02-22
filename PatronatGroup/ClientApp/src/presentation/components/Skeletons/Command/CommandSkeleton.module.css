@@ -1,6 +1,12 @@
 .container {
   display: flex;
   padding: 15px;
+  width: 100%;
+  max-width: 61.6rem;
+  border: 1px solid #B3CDE0;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
 }
 
 .title {
@@ -24,7 +30,7 @@
 .conten {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 60%; 
   margin-left: 10px;
   justify-content: space-between;
 }
@@ -32,26 +38,30 @@
   font-family: Tenor Sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 28px;
   color: #b3cde0;
+  display: -webkit-box;
+   -webkit-line-clamp: 6; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .buttonAndSocial {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .containerImg{
-  width: 100%;
-  max-width: 400px;
-  height: 350px;
+  height: 100%;
+  width: 40%;
+  object-fit: contain;
   border-radius: 3px;
   overflow: hidden;
   display: flex;
 }
 .img{
-  width: 100%;
-  display: flex;
-  margin: 0 auto;
+    width: 350px;
+    height: 350px;
 }
 

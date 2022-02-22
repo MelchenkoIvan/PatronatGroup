@@ -17,7 +17,7 @@ interface Props {
 const CommandSkeleton: FC<Props> = (props) => {
   return (
     <>
-      <div className={`commonForBloks forBloksBackground ${style.container}`}>
+      <div className={`forBloksBackground ${style.container}`}>
         <div className={style.containerImg}>
           <img src={props.icon} alt={props.icon} className={style.img}></img>
         </div>

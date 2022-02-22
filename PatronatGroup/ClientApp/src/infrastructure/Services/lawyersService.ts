@@ -4,11 +4,12 @@ import ToContactUs from '../../application/models/ToContactUs';
 import notificationService from './notificationService';
 import Sc from '../../application/models/Sc';
 import i18next from 'i18next';
+import { getCookie } from './cookieService';
 
 export const lawyersService = {
     async GetLawyers(sc:Sc) {
         try {
-            let data = await connectionString.api.post<Lawyer>('lawyers/lawyers',{...sc, lang: i18next.language})
+            let data = await connectionString.api.post<Lawyer>('lawyers/lawyers',{...sc, lang: getCookie("lang")})
                 .then(response => response.data);
             return data;
         }

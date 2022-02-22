@@ -1,5 +1,5 @@
 export const translationsEn = {
-  firmaName: "Patronage group",
+  firmaName: "Patronat group",
   lawyersAssociation: "Lawyers' association",
   aboutCompany: "About company",
   benefits: "Benefits",

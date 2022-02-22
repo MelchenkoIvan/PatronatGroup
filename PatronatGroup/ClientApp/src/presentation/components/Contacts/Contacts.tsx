@@ -1,5 +1,5 @@
 import { t } from "i18next";
-import React from "react";
+import React, { FC } from "react";
 import { useHistory } from "react-router";
 import Button from "../../../infrastructure/Common/components/Button";
 import Social from "../../../infrastructure/Common/components/Social";
@@ -9,25 +9,27 @@ import Blok from "../Skeletons/Blok";
 import style from "./Contacts.module.css";
 //Icons
 import qrCode from "../../../assets/qrCode.png";
-const Contacts = () => {
+import TranslateHoc from "../../../infrastructure/Common/hoc/TranslateHoc";
+import { TranslateInterface } from "../../../infrastructure/Common/i18n/resources";
+const Contacts:FC<TranslateInterface> = ({translate}) => {
   return (
     <div>
-      <Blok title={t(labels.contacts)} Content={Content} />
+      <Blok  title={translate(labels.contacts)} Content={Content} />
     </div>
   );
 };
-export default Contacts;
-const Content = () => {
-  const history = useHistory();
+export default TranslateHoc(Contacts);
+
+let Content:FC<TranslateInterface> = ({translate}) => {
   return (
     <div className={style.container}>
       <div className={style.description}>
-        {t(labels.location)}
+        {translate(labels.location)}
       </div>
       <div className={style.content}>
         <div className={style.qrCode}>
-          <div className={style.qrCodeTitle}>{t(labels.qrCode)}</div>
-          <div className={style.qrCodeDescription}> {t(labels.qrCodeDescription)}</div>
+          <div className={style.qrCodeTitle}>{translate(labels.qrCode)}</div>
+          <div className={style.qrCodeDescription}> {translate(labels.qrCodeDescription)}</div>
           <img className={style.qrCodeImg} src={qrCode} alt="QR"/>
         </div>
         <iframe className={style.map}
@@ -41,3 +43,4 @@ const Content = () => {
     </div>
   );
 };
+Content = TranslateHoc(Content);

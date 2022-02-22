@@ -22,6 +22,7 @@ const AboutCompanyBlok: FC<PropsType> = (props) => {
   const hideModal = () => {
     setShow(false);
   };
+  
   return (
     <>
       <div className={style.containerAboutCompany}>

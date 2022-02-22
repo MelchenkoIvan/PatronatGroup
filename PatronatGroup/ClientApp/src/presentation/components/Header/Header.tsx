@@ -6,6 +6,7 @@ import style from "./Header.module.css";
 import styleMenu from "./Menu/Menu.module.css";
 //icons
 import logo from "../../../assets/LOGO.png";
+import TranslateHoc from "../../../infrastructure/Common/hoc/TranslateHoc";
 
 const Header: FC = () => {
   const onClickMenu = () => {
@@ -26,4 +27,4 @@ const Header: FC = () => {
     </div>
   );
 };
-export default Header;
+export default TranslateHoc(Header);

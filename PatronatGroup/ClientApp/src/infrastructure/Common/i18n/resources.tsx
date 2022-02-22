@@ -17,7 +17,7 @@ i18n
     },
     lng: "ua",
     fallbackLng: "en",
-    interpolation: { escapeValue: false },
+    interpolation: { escapeValue: true },
   });
 
 const LenguagesButtons: FC = () => {
