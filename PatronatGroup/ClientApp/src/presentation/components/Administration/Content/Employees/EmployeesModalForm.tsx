@@ -115,7 +115,7 @@ const EmployeesModalForm: FC<Props> = ({
                     fileRef.current.click();
                   }}
                 >
-                  {t(labels.loginAsAdmin)}
+                  {t(labels.uploadImg)}
                 </Button>
                 { values.image && <Thumb file={values.image} /> }
                 <Container textAlign="right">
