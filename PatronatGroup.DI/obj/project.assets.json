@@ -1848,7 +1848,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.Extensions.Identity.Core": "5.0.13",
+          "Microsoft.Extensions.Identity.Core": "6.0.1",
           "PatronatGroup.Common": "1.0.0"
         },
         "compile": {

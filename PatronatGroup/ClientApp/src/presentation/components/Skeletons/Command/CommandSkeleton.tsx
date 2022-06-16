@@ -12,16 +12,20 @@ interface Props {
   icon: string;
   description: string;
   isSlider?: boolean;
+  isCommandPage?: boolean;
 }
 
 const CommandSkeleton: FC<Props> = (props) => {
+  const classContainerCommandPage = props.isCommandPage ? `commonForBloks forBloksBackground ${style.containerCommandPage}` : `forBloksBackground ${style.container}`
+  const classContainerImgCommandPage = props.isCommandPage ? `${style.containerImgCommandPage}` : `${style.containerImg}`
+  const classContenCommandPage = props.isCommandPage ? `${style.contenCommandPage}` : `${style.conten}`
   return (
     <>
-      <div className={`forBloksBackground ${style.container}`}>
-        <div className={style.containerImg}>
+      <div className={classContainerCommandPage}>
+        <div className={classContainerImgCommandPage}>
           <img src={props.icon} alt={props.icon} className={style.img}></img>
         </div>
-        <div className={style.conten}>
+        <div className={classContenCommandPage}>
           <div>
             <div className={style.title}>{props.name}</div>
             <div className={style.subTitle}>{props.contactData}</div>
@@ -29,7 +33,8 @@ const CommandSkeleton: FC<Props> = (props) => {
           </div>
           <div className={style.buttonAndSocial}>
             {!props.isSlider && (
-              <Button content={t(labels.moreDetails)} onClick={() => {}} />
+              <div></div>
+              //<Button content={t(labels.moreDetails)} onClick={() => {}} />
             )}
             <Social isFlex={props.isSlider}/>
           </div>

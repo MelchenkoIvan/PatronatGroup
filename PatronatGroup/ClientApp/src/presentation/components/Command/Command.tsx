@@ -35,6 +35,7 @@ const Command: FC<PropsType> = (props) => {
               name={x.fullName!}
               icon={x.image || exImg}
               description={x.description!}
+              isCommandPage
             />
            
           </div>

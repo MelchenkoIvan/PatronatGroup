@@ -43,7 +43,7 @@ const EmployeesModalForm: FC<Props> = ({
     email: Yup.string()
       .email(t(labels.invalidEmail))
       .required(t(labels.emailRequired)),
-    position: Yup.string().required(t(labels.positionRequired)),
+    //position: Yup.string().required(t(labels.positionRequired)),
     descriptionUA: Yup.string()
       .required(t(labels.descriptionRequired))
       .max(4000, t(labels.maxCharacters)),

@@ -24,3 +24,7 @@ C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGro
 C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Facades\bin\Debug\net5.0\PatronatGroup.Common.dll
 C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Facades\bin\Debug\net5.0\PatronatGroup.Common.pdb
 C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Facades\obj\Debug\net5.0\PatronatGroup.Interfaces.Facades.csproj.CopyComplete
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Facades\bin\Debug\net5.0\PatronatGroup.EntityFramework.dll
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Facades\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastructure.dll
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Facades\bin\Debug\net5.0\PatronatGroup.EntityFramework.pdb
+C:\Users\imelc\OneDrive\Desktop\PracaDyplomowa\Projekt\PatronatGroup\PatronatGroup.Interfaces.Facades\bin\Debug\net5.0\PatronatGroup.Interfaces.Infrastructure.pdb

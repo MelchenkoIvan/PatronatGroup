@@ -8,7 +8,10 @@
   backdrop-filter: blur(4px);
   border-radius: 10px;
 }
-
+.containerCommandPage{
+  display: flex;
+  padding: 15px;
+}
 .title {
   font-family: Tenor Sans;
   font-style: normal;
@@ -60,8 +63,19 @@
   overflow: hidden;
   display: flex;
 }
+.containerImgCommandPage{
+  height: 100%;
+  border-radius: 3px;
+}
+.contenCommandPage{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
 .img{
-    width: 350px;
-    height: 350px;
+  width: 350px;
+  height: 350px;
 }
 

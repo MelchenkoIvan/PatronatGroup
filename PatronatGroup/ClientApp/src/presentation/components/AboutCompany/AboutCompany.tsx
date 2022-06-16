@@ -4,8 +4,8 @@ import aboutCompanyImg from "../../../assets/aboutCompany.png";
 import TranslateHoc from "../../../infrastructure/Common/hoc/TranslateHoc";
 import { t } from "i18next";
 import { labels } from "../../../infrastructure/Common/i18n/translationsServices";
-import AboutCompanyBlok from "../HomePage/Bloks/AboutCompanyBlok";
 import ToMainButton from "../../../infrastructure/Common/components/ToMainButton";
+import AboutCompanyBlokContainer from "../HomePage/Bloks/AboutCompanyBlokContainer";
 
 const AboutCompany: FC = () => {
   return (
@@ -13,7 +13,7 @@ const AboutCompany: FC = () => {
       <Blok
         icon={aboutCompanyImg}
         title={t(labels.aboutCompany)}
-        Content={AboutCompanyBlok}
+        Content={AboutCompanyBlokContainer}
       />
       <ToMainButton/>
     </div>
